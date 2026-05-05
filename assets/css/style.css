@@ -829,9 +829,21 @@ h1 {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.formation-card:hover {
+.formation-card:hover,
+.program-card.clickable-card:hover,
+.program-card.clickable-card:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.34);
+}
+
+.program-card.clickable-card {
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.program-card.clickable-card:focus-visible {
+  outline: 3px solid rgba(197, 160, 89, 0.55);
+  outline-offset: 4px;
 }
 
 .formation-card img,
@@ -845,6 +857,24 @@ h1 {
 .program-card-body,
 .resource-card {
   padding: 24px;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  color: var(--gold-soft);
+  font-weight: 900;
+}
+
+.card-link::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-left: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
 }
 
 .program-card-body {
@@ -876,6 +906,8 @@ h1 {
 
 .program-card-body .button,
 .program-card-body .button-secondary {
+  position: relative;
+  z-index: 2;
   margin-top: auto;
 }
 
@@ -1045,11 +1077,153 @@ h1 {
   color: var(--gold-soft);
 }
 
+.programme-navigation {
+  padding: 24px 0;
+  border-block: 1px solid var(--line);
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.programme-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.programme-nav a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 999px;
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.level-grid,
+.module-grid,
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.module-grid,
+.session-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.level-card,
+.module-card,
+.session-card,
+.evaluation-card {
+  min-height: 100%;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--soft-shadow);
+}
+
+.level-card.featured-level {
+  border-color: rgba(197, 160, 89, 0.58);
+  background:
+    linear-gradient(180deg, rgba(197, 160, 89, 0.14), rgba(197, 160, 89, 0.04)),
+    var(--surface-elevated);
+}
+
+.level-badge,
+.module-card span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin-bottom: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-gold);
+  color: var(--brand-charcoal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.module-card span {
+  width: 38px;
+  height: 38px;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.level-card h3,
+.module-card h3,
+.session-card strong,
+.evaluation-card h3 {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold-soft);
+  font-size: 22px;
+  line-height: 1.22;
+}
+
+.level-card p,
+.module-card p,
+.session-card p {
+  margin-bottom: 0;
+}
+
+.evaluation-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+  align-items: start;
+}
+
+.evaluation-card {
+  background:
+    linear-gradient(180deg, rgba(197, 160, 89, 0.1), rgba(197, 160, 89, 0.02)),
+    var(--surface);
+}
+
+.evaluation-list {
+  display: grid;
+  gap: 14px;
+}
+
+.evaluation-list div {
+  padding: 16px;
+  border: 1px solid rgba(197, 160, 89, 0.18);
+  border-radius: var(--radius);
+  background: rgba(197, 160, 89, 0.06);
+}
+
+.evaluation-list strong,
+.evaluation-list span {
+  display: block;
+}
+
+.evaluation-list strong {
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.evaluation-list span {
+  color: var(--text-muted);
+}
+
 .price-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 28px;
+}
+
+.price-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .price-card {
@@ -1587,7 +1761,11 @@ h1 {
 @media (max-width: 1100px) {
   .program-grid.expanded,
   .outcome-grid,
-  .price-grid {
+  .level-grid,
+  .module-grid,
+  .session-grid,
+  .price-grid,
+  .price-grid.three-up {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1659,13 +1837,18 @@ h1 {
   .review-grid,
   .format-grid,
   .price-grid,
+  .price-grid.three-up,
   .step-grid,
   .resource-grid,
   .detail-grid,
   .modal-grid,
+  .level-grid,
+  .module-grid,
+  .session-grid,
   .stats-grid,
   .trust-strip,
   .split,
+  .evaluation-layout,
   .values,
   .featured,
   .feature-list,
