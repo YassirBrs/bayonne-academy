@@ -24,6 +24,7 @@ if (heroBg) {
 
 const navShell = document.getElementById("navShell");
 const menuToggle = document.getElementById("menuToggle");
+const whatsappNumber = "212697965070";
 
 if (navShell && menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -59,7 +60,7 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
     const format = data.get("format") || "";
     const details = data.get("message") || "";
     const message = encodeURIComponent(`Salam, je souhaite réserver une place chez Bayan Academy.\nNom: ${name}\nContact: ${contact}\nProgramme: ${formation}\nFormat: ${format}\nInformations: ${details}`);
-    const whatsappUrl = `https://wa.me/212656304934?text=${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     const note = form.querySelector(".form-note");
     if (note) {
       note.innerHTML = `Votre message est prêt. <a href="${whatsappUrl}" target="_blank" rel="noopener">Ouvrir WhatsApp</a> pour plus d’informations et finaliser la réservation.`;
@@ -67,3 +68,63 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
     window.open(whatsappUrl, "_blank", "noopener");
   });
 });
+
+const registrationModal = document.querySelector("[data-registration-modal]");
+const registrationForm = document.querySelector("[data-registration-form]");
+let lastRegistrationTrigger = null;
+
+const closeRegistrationModal = () => {
+  if (!registrationModal) {
+    return;
+  }
+  registrationModal.hidden = true;
+  document.body.classList.remove("menu-open");
+  if (lastRegistrationTrigger) {
+    lastRegistrationTrigger.focus();
+  }
+};
+
+const openRegistrationModal = (trigger) => {
+  if (!registrationModal) {
+    return;
+  }
+  lastRegistrationTrigger = trigger;
+  const programmeField = registrationModal.querySelector("[data-programme-field]");
+  if (programmeField && trigger.dataset.programme) {
+    programmeField.value = trigger.dataset.programme;
+  }
+  registrationModal.hidden = false;
+  document.body.classList.add("menu-open");
+  const firstField = registrationModal.querySelector("select, input:not([readonly]), textarea, button");
+  if (firstField) {
+    firstField.focus();
+  }
+};
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-open-registration]");
+  if (trigger) {
+    openRegistrationModal(trigger);
+    return;
+  }
+
+  const closeTrigger = event.target.closest("[data-close-registration]");
+  if (closeTrigger || event.target === registrationModal) {
+    closeRegistrationModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && registrationModal && !registrationModal.hidden) {
+    closeRegistrationModal();
+  }
+});
+
+if (registrationForm) {
+  registrationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(registrationForm);
+    const message = encodeURIComponent(`Salam, je souhaite réserver une place chez Bayan Academy.\nProgramme: ${data.get("programme") || ""}\nSessions par semaine: ${data.get("sessions") || ""}\nDurée: ${data.get("duration") || ""}\nFormat: ${data.get("format") || ""}\nNom: ${data.get("name") || ""}\nContact: ${data.get("contact") || ""}\nNiveau / âge: ${data.get("level") || ""}\nDétails: ${data.get("details") || ""}`);
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank", "noopener");
+  });
+}
