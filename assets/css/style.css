@@ -908,7 +908,12 @@ h1 {
 .program-card-body .button-secondary {
   position: relative;
   z-index: 2;
+  width: 100%;
+  min-height: 54px;
+  padding-inline: 16px;
   margin-top: auto;
+  text-align: center;
+  line-height: 1.15;
 }
 
 .formation-card p,
