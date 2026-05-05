@@ -24,3 +24,10 @@
 - [x] Rework cards, forms, navigation, footer, and section bands for dark surfaces with gold accents.
 - [x] Update browser theme and manifest colors to match the charcoal brand background.
 - [x] Verify syntax, local references, and browser rendering after the palette change.
+
+## Bayan Academy Rename
+
+- [x] Replace the previous brand name across titles, metadata, navigation, page copy, legal pages, and footers.
+- [x] Update the web app manifest name and short name to Bayan Academy.
+- [x] Remove old brand-specific social links from public page content and structured data.
+- [x] Verify references, browser rendering, commit, and push the rename.
