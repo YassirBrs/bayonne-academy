@@ -1,0 +1,3 @@
+Contact: https://yassirbrs.github.io/bayonne-academy/contactez-nous.html
+Preferred-Languages: fr, en
+Canonical: https://yassirbrs.github.io/bayonne-academy/.well-known/security.txt

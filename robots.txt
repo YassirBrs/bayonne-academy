@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yassirbrs.github.io/bayonne-academy/sitemap.xml

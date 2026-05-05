@@ -1,0 +1,17 @@
+{
+  "name": "Jannati Institut",
+  "short_name": "Jannati",
+  "description": "Formations Quran, langue arabe et sciences islamiques.",
+  "start_url": "/bayonne-academy/",
+  "scope": "/bayonne-academy/",
+  "display": "standalone",
+  "background_color": "#181313",
+  "theme_color": "#3a2f2d",
+  "icons": [
+    {
+      "src": "assets/images/icon.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    }
+  ]
+}
