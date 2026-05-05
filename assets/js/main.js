@@ -52,6 +52,56 @@ const builtInTranslations = {
       "Voir les tarifs": "View pricing",
       "S'inscrire": "Register",
       "S'inscrire maintenant": "Register now",
+      "Faire le test de niveau": "Take the level test",
+      "Orientation rapide": "Quick guidance",
+      "Test de niveau avant inscription": "Level test before registration",
+      "Répondez à quelques questions pour préparer une recommandation claire avant de contacter l’équipe.": "Answer a few questions to prepare a clear recommendation before contacting the team.",
+      "Programme conseillé selon l’âge et le niveau": "Programme recommended by age and level",
+      "Format individualisé ou groupe": "Individualized or group format",
+      "Message WhatsApp prérempli": "Prefilled WhatsApp message",
+      "Profil": "Profile",
+      "Adulte ou adolescent": "Adult or teenager",
+      "Enfant": "Child",
+      "Niveau actuel": "Current level",
+      "Je débute complètement": "I am a complete beginner",
+      "Je connais les lettres mais je lis lentement": "I know the letters but read slowly",
+      "Je lis déjà mais je veux gagner en fluidité": "I already read but want more fluency",
+      "Je veux surtout parler et comprendre": "I mainly want to speak and understand",
+      "Objectif principal": "Main goal",
+      "Renforcer la lecture": "Strengthen reading",
+      "Comprendre avec méthode": "Understand with method",
+      "Communiquer en arabe": "Communicate in Arabic",
+      "Accompagner un enfant": "Support a child",
+      "Format préféré": "Preferred format",
+      "Je veux être conseillé": "I want advice",
+      "Voir ma recommandation": "See my recommendation",
+      "Recommandation Bayan Academy": "Bayan Academy recommendation",
+      "Envoyer sur WhatsApp": "Send on WhatsApp",
+      "Comparer les formats": "Compare formats",
+      "Choisissez le cadre qui vous fera avancer": "Choose the setting that will move you forward",
+      "Comme les meilleurs instituts en ligne, Bayan Academy rend le choix du format visible avant la réservation.": "Like strong online institutes, Bayan Academy makes the format choice visible before reservation.",
+      "Suivi proche": "Close follow-up",
+      "Programme individualisé": "Individualized programme",
+      "Pour un objectif précis, un besoin de correction rapprochée ou des disponibilités particulières.": "For a specific goal, closer correction needs or specific availability.",
+      "Rythme ajusté": "Adjusted pace",
+      "Corrections ciblées": "Targeted corrections",
+      "WhatsApp pour confirmer": "WhatsApp to confirm",
+      "Voir le parcours": "View the path",
+      "Populaire": "Popular",
+      "Programme en groupe": "Group programme",
+      "Pour progresser avec un cadre régulier, des échanges guidés et un niveau proche entre étudiants.": "To progress with a regular framework, guided exchanges and similar student levels.",
+      "Dynamique motivante": "Motivating dynamic",
+      "Objectifs communs": "Shared goals",
+      "Tarifs dès 38.50 €/mois": "Pricing from €38.50/month",
+      "Choisir un programme": "Choose a programme",
+      "Découverte": "Discovery",
+      "Masterclass découverte": "Discovery masterclass",
+      "Pour tester le niveau, clarifier l’objectif et éviter de choisir un programme au hasard.": "To test the level, clarify the goal and avoid choosing a programme at random.",
+      "Session à 10 €": "€10 session",
+      "Commencer léger": "Start lightly",
+      "Recommandation: Programme arabe enfants. Le plus adapté est de confirmer l’âge, le niveau de lecture et le rythme avec l’équipe.": "Recommendation: Children's Arabic programme. The best next step is to confirm age, reading level and pace with the team.",
+      "Recommandation: Communication arabe. Ce parcours est conseillé si l’objectif principal est de comprendre et parler avec plus d’aisance.": "Recommendation: Arabic communication. This path is recommended if the main goal is to understand and speak with more ease.",
+      "Recommandation: Masterclasses d’arabe. Ce parcours est conseillé pour renforcer la lecture, la compréhension et les bases.": "Recommendation: Arabic masterclasses. This path is recommended to strengthen reading, comprehension and foundations.",
       "Résultats recherchés": "Target outcomes",
       "Ce que l’étudiant doit gagner": "What the student should gain",
       "Le parcours ne promet pas une progression floue. Chaque séance travaille un résultat concret et vérifiable.": "The path does not promise vague progress. Each session works toward a concrete and verifiable result.",
@@ -354,6 +404,45 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
       note.innerHTML = `${translateText("Votre message est prêt.", currentLanguage)} <a href="${whatsappUrl}" target="_blank" rel="noopener">${translateText("Ouvrir WhatsApp", currentLanguage)}</a> ${translateText("pour plus d’informations et finaliser la réservation.", currentLanguage)}`;
     }
     window.open(whatsappUrl, "_blank", "noopener");
+  });
+});
+
+document.querySelectorAll("[data-level-test]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const audience = data.get("audience") || "";
+    const level = data.get("level") || "";
+    const goal = data.get("goal") || "";
+    const format = data.get("format") || "";
+    const levelLabel = form.elements.level?.selectedOptions?.[0]?.dataset.bayanFrText || form.elements.level?.selectedOptions?.[0]?.textContent || level;
+    const goalLabel = form.elements.goal?.selectedOptions?.[0]?.dataset.bayanFrText || form.elements.goal?.selectedOptions?.[0]?.textContent || goal;
+    const formatLabel = form.elements.format?.selectedOptions?.[0]?.dataset.bayanFrText || form.elements.format?.selectedOptions?.[0]?.textContent || format;
+    let programme = "Masterclasses d’arabe";
+    let recommendation = "Recommandation: Masterclasses d’arabe. Ce parcours est conseillé pour renforcer la lecture, la compréhension et les bases.";
+
+    if (audience === "child" || goal === "child") {
+      programme = "Programme arabe enfants";
+      recommendation = "Recommandation: Programme arabe enfants. Le plus adapté est de confirmer l’âge, le niveau de lecture et le rythme avec l’équipe.";
+    } else if (goal === "speaking" || level === "speaking") {
+      programme = "Communication arabe";
+      recommendation = "Recommandation: Communication arabe. Ce parcours est conseillé si l’objectif principal est de comprendre et parler avec plus d’aisance.";
+    }
+
+    const result = form.querySelector("[data-level-result]");
+    const resultText = form.querySelector("[data-level-result-text]");
+    const whatsappLink = form.querySelector("[data-level-whatsapp]");
+    if (resultText) {
+      resultText.__bayanFrText = recommendation;
+      resultText.textContent = translateText(recommendation, currentLanguage);
+    }
+    if (whatsappLink) {
+      const message = encodeURIComponent(`${translateText("Salam, je souhaite réserver une place chez Bayan Academy.", currentLanguage)}\n${translateText("Programme", currentLanguage)}: ${translateText(programme, currentLanguage)}\n${translateText("Niveau actuel", currentLanguage)}: ${translateText(levelLabel, currentLanguage)}\n${translateText("Objectif principal", currentLanguage)}: ${translateText(goalLabel, currentLanguage)}\n${translateText("Format préféré", currentLanguage)}: ${translateText(formatLabel, currentLanguage)}`);
+      whatsappLink.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+    }
+    if (result) {
+      result.hidden = false;
+    }
   });
 });
 

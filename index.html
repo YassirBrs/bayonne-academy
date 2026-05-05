@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="Masterclasses d’arabe pour adultes et programme dédié aux enfants.">
     <meta name="twitter:image" content="https://yassirbrs.github.io/bayonne-academy/assets/images/arabe.webp">
     <link rel="preload" as="image" href="assets/images/hero-1.webp">
-    <link rel="stylesheet" href="assets/css/style.css?v=home-sections">
+    <link rel="stylesheet" href="assets/css/style.css?v=competitor-features">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -82,7 +82,7 @@
           <p class="hero-open">Masterclasses pour adultes et programme dédié aux enfants</p>
           <div class="hero-actions">
             <a class="button" href="nos-formations.html">Voir les programmes</a>
-            <a class="button-secondary" href="contactez-nous.html">S'inscrire</a>
+            <a class="button-secondary" href="#test-niveau">Faire le test de niveau</a>
           </div>
         </div>
         <a class="scroll-cue" href="#formations" aria-label="Voir les programmes"></a>
@@ -153,6 +153,58 @@
         </div>
       </section>
 
+      <section class="section tint" id="test-niveau" aria-labelledby="level-test-title">
+        <div class="section-inner level-test-layout">
+          <div class="split-copy">
+            <span class="eyebrow">Orientation rapide</span>
+            <h2 id="level-test-title">Test de niveau avant inscription</h2>
+            <p>Répondez à quelques questions pour préparer une recommandation claire avant de contacter l’équipe.</p>
+            <ul class="check-list">
+              <li>Programme conseillé selon l’âge et le niveau</li>
+              <li>Format individualisé ou groupe</li>
+              <li>Message WhatsApp prérempli</li>
+            </ul>
+          </div>
+          <form class="level-test-card" data-level-test>
+            <label>Profil
+              <select name="audience" required>
+                <option value="adult">Adulte ou adolescent</option>
+                <option value="child">Enfant</option>
+              </select>
+            </label>
+            <label>Niveau actuel
+              <select name="level" required>
+                <option value="beginner">Je débute complètement</option>
+                <option value="letters">Je connais les lettres mais je lis lentement</option>
+                <option value="reading">Je lis déjà mais je veux gagner en fluidité</option>
+                <option value="speaking">Je veux surtout parler et comprendre</option>
+              </select>
+            </label>
+            <label>Objectif principal
+              <select name="goal" required>
+                <option value="reading">Renforcer la lecture</option>
+                <option value="understanding">Comprendre avec méthode</option>
+                <option value="speaking">Communiquer en arabe</option>
+                <option value="child">Accompagner un enfant</option>
+              </select>
+            </label>
+            <label>Format préféré
+              <select name="format" required>
+                <option>Programme individualisé</option>
+                <option>Programme en groupe</option>
+                <option>Je veux être conseillé</option>
+              </select>
+            </label>
+            <button class="button" type="submit">Voir ma recommandation</button>
+            <div class="level-result" data-level-result hidden>
+              <h3>Recommandation Bayan Academy</h3>
+              <p data-level-result-text></p>
+              <a class="button-secondary" href="https://wa.me/212697965070" target="_blank" rel="noopener" data-level-whatsapp>Envoyer sur WhatsApp</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <section class="section" aria-labelledby="outcomes-title">
         <div class="section-inner">
           <div class="section-lead">
@@ -180,6 +232,39 @@
               <strong>04</strong>
               <h3>Garder un rythme réaliste</h3>
               <p>Choisir un format individualisé ou en groupe selon l’âge, le niveau et les disponibilités.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" aria-labelledby="formats-title">
+        <div class="section-inner">
+          <div class="section-lead">
+            <span class="eyebrow">Comparer les formats</span>
+            <h2 id="formats-title">Choisissez le cadre qui vous fera avancer</h2>
+            <p>Comme les meilleurs instituts en ligne, Bayan Academy rend le choix du format visible avant la réservation.</p>
+          </div>
+          <div class="format-grid">
+            <article class="format-card">
+              <span class="price-label">Suivi proche</span>
+              <h3>Programme individualisé</h3>
+              <p>Pour un objectif précis, un besoin de correction rapprochée ou des disponibilités particulières.</p>
+              <ul class="check-list"><li>Rythme ajusté</li><li>Corrections ciblées</li><li>WhatsApp pour confirmer</li></ul>
+              <a class="button-secondary" href="programme-masterclasses-arabe.html#tarifs">Voir le parcours</a>
+            </article>
+            <article class="format-card featured-format">
+              <span class="price-label">Populaire</span>
+              <h3>Programme en groupe</h3>
+              <p>Pour progresser avec un cadre régulier, des échanges guidés et un niveau proche entre étudiants.</p>
+              <ul class="check-list"><li>Dynamique motivante</li><li>Objectifs communs</li><li>Tarifs dès 38.50 €/mois</li></ul>
+              <a class="button" href="nos-formations.html">Choisir un programme</a>
+            </article>
+            <article class="format-card">
+              <span class="price-label">Découverte</span>
+              <h3>Masterclass découverte</h3>
+              <p>Pour tester le niveau, clarifier l’objectif et éviter de choisir un programme au hasard.</p>
+              <ul class="check-list"><li>Diagnostic rapide</li><li>Conseil de rythme</li><li>Session à 10 €</li></ul>
+              <a class="button-secondary" href="programme-masterclasses-arabe.html#tarifs">Commencer léger</a>
             </article>
           </div>
         </div>
@@ -382,6 +467,6 @@
     </footer>
 
     <a class="whatsapp" href="https://wa.me/212697965070" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-    <script src="assets/js/main.js?v=home-sections"></script>
+    <script src="assets/js/main.js?v=competitor-features"></script>
   </body>
 </html>
