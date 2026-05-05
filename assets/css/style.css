@@ -1003,6 +1003,88 @@ html[lang="en"] [data-lang-panel="fr"] {
   text-underline-offset: 4px;
 }
 
+.article-highlight {
+  margin: 26px 0 8px;
+  padding: 22px;
+  border: 1px solid rgba(197, 160, 89, 0.34);
+  border-radius: var(--radius);
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.article-highlight strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-soft);
+  font-size: 18px;
+}
+
+.article-highlight p {
+  margin-bottom: 0;
+}
+
+.article-steps {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 24px;
+  padding: 0;
+  list-style: none;
+  counter-reset: article-step;
+}
+
+.article-steps li {
+  position: relative;
+  min-height: 76px;
+  padding: 18px 18px 18px 72px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+  counter-increment: article-step;
+}
+
+.article-steps li::before {
+  content: counter(article-step);
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.article-steps strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.article-steps span {
+  display: block;
+  color: var(--text-muted);
+}
+
+.article-link-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0 8px;
+}
+
+.article-link-panel .button,
+.article-link-panel .button-secondary {
+  width: 100%;
+  text-decoration: none;
+}
+
+.article-faq {
+  max-width: none;
+  margin: 18px 0 0;
+}
+
 .article-aside {
   position: sticky;
   top: 120px;
@@ -2043,6 +2125,25 @@ html[lang="en"] [data-lang-panel="fr"] {
   .button,
   .button-secondary {
     width: 100%;
+  }
+
+  .article-content {
+    padding: 22px;
+  }
+
+  .article-steps li {
+    padding: 16px 16px 16px 62px;
+  }
+
+  .article-steps li::before {
+    top: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .article-link-panel {
+    grid-template-columns: 1fr;
   }
 
   .modal-overlay {
