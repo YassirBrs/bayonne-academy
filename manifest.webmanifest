@@ -1,7 +1,7 @@
 {
   "name": "Bayan Academy",
   "short_name": "Bayan",
-  "description": "Formations Quran, langue arabe et sciences islamiques.",
+  "description": "Masterclasses d’arabe et programme dédié aux enfants.",
   "start_url": "/bayonne-academy/",
   "scope": "/bayonne-academy/",
   "display": "standalone",

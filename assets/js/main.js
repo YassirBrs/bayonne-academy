@@ -54,11 +54,16 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
     event.preventDefault();
     const data = new FormData(form);
     const name = data.get("name") || "";
+    const contact = data.get("contact") || "";
     const formation = data.get("formation") || "";
-    const message = encodeURIComponent(`Salam, je souhaite des informations pour ${formation}. Nom: ${name}`);
+    const format = data.get("format") || "";
+    const details = data.get("message") || "";
+    const message = encodeURIComponent(`Salam, je souhaite réserver une place chez Bayan Academy.\nNom: ${name}\nContact: ${contact}\nProgramme: ${formation}\nFormat: ${format}\nInformations: ${details}`);
+    const whatsappUrl = `https://wa.me/212656304934?text=${message}`;
     const note = form.querySelector(".form-note");
     if (note) {
-      note.innerHTML = `Votre message est prêt. <a href="https://wa.me/212656304934?text=${message}" target="_blank" rel="noopener">Ouvrir WhatsApp</a> pour finaliser l'inscription.`;
+      note.innerHTML = `Votre message est prêt. <a href="${whatsappUrl}" target="_blank" rel="noopener">Ouvrir WhatsApp</a> pour plus d’informations et finaliser la réservation.`;
     }
+    window.open(whatsappUrl, "_blank", "noopener");
   });
 });
