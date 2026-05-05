@@ -17,13 +17,15 @@
     <meta property="og:url" content="https://yassirbrs.github.io/bayonne-academy/nos-formations.html">
     <meta property="og:image" content="https://yassirbrs.github.io/bayonne-academy/assets/images/arabe.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="assets/css/style.css?v=programme-details">
+    <link rel="preload" as="image" href="assets/images/hero-2.webp" fetchpriority="high">
+    <link rel="preload" href="assets/css/style.css?v=performance-pass" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css?v=performance-pass"></noscript>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu</a>
     <header class="site-header" aria-label="Navigation principale">
       <div class="nav-shell" id="navShell">
-        <a class="brand" href="index.html" aria-label="Bayan Academy"><img loading="lazy" decoding="async" src="assets/images/icon.png" alt=""><span>Bayan Academy</span></a>
+        <a class="brand" href="index.html" aria-label="Bayan Academy"><img loading="eager" decoding="async" src="assets/images/icon.png" alt="" width="96" height="96"><span>Bayan Academy</span></a>
         <nav class="nav-links" aria-label="Menu">
           <a href="index.html">Accueil</a>
           <a href="nos-formations.html" aria-current="page">Nos programmes</a>
@@ -55,7 +57,7 @@
           </div>
           <div class="program-grid expanded">
             <article class="program-card clickable-card" id="masterclasses" data-card-link="programme-masterclasses-arabe.html" role="link" tabindex="0" aria-label="Découvrir le programme Masterclasses d’arabe">
-              <img loading="lazy" decoding="async" src="assets/images/arabe.webp" alt="Langue arabe">
+              <img loading="eager" decoding="async" fetchpriority="high" src="assets/images/arabe.webp" alt="Langue arabe" width="768" height="713">
               <div class="program-card-body">
                 <span class="price-pill">À partir de 38.50 €/mois</span>
                 <h3>Masterclasses d’arabe</h3>
@@ -65,7 +67,7 @@
               </div>
             </article>
             <article class="program-card clickable-card" data-card-link="programme-communication-arabe.html" role="link" tabindex="0" aria-label="Découvrir le programme Communication arabe">
-              <img loading="lazy" decoding="async" src="assets/images/hero-5.webp" alt="Communication arabe">
+              <img loading="lazy" decoding="async" src="assets/images/hero-5.webp" alt="Communication arabe" width="768" height="768">
               <div class="program-card-body">
                 <span class="price-pill">À partir de 38.50 €/mois</span>
                 <h3>Communication arabe</h3>
@@ -75,7 +77,7 @@
               </div>
             </article>
             <article class="program-card clickable-card" id="enfants" data-card-link="programme-arabe-enfants.html" role="link" tabindex="0" aria-label="Découvrir le programme arabe enfants">
-              <img loading="lazy" decoding="async" src="assets/images/hero-3.webp" alt="Programme arabe enfants">
+              <img loading="lazy" decoding="async" src="assets/images/hero-3.webp" alt="Programme arabe enfants" width="768" height="713">
               <div class="program-card-body">
                 <span class="price-pill">À partir de 41.50 €/mois</span>
                 <h3>Programme arabe enfants</h3>
@@ -85,7 +87,7 @@
               </div>
             </article>
             <article class="program-card clickable-card" data-card-link="programme-masterclasses-arabe.html#evaluation" role="link" tabindex="0" aria-label="Découvrir la masterclass découverte">
-              <img loading="lazy" decoding="async" src="assets/images/hero-4.webp" alt="Masterclass">
+              <img loading="lazy" decoding="async" src="assets/images/hero-4.webp" alt="Masterclass" width="768" height="714">
               <div class="program-card-body">
                 <span class="price-pill">10 €</span>
                 <h3>Masterclass découverte</h3>
@@ -120,6 +122,6 @@
       <div class="footer-bottom"><div class="footer-bottom-inner"><span>Copyright © Bayan Academy</span><nav aria-label="Mentions"><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="conditions-utilisation.html">Conditions générales</a></nav></div></div>
     </footer>
     <a class="whatsapp" href="https://wa.me/212697965070" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-    <script src="assets/js/main.js?v=programme-details"></script>
+    <script src="assets/js/main.js?v=performance-pass" defer></script>
   </body>
 </html>

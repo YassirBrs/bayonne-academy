@@ -12,14 +12,22 @@ const heroBg = document.getElementById("heroBg");
 if (heroBg) {
   let heroIndex = 0;
 
-  setInterval(() => {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    heroBg.style.opacity = "0";
-    setTimeout(() => {
-      heroBg.style.backgroundImage = `url("${heroImages[heroIndex]}")`;
-      heroBg.style.opacity = "1";
-    }, 500);
-  }, 3600);
+  const startHeroCycle = () => {
+    setInterval(() => {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      heroBg.style.opacity = "0";
+      setTimeout(() => {
+        heroBg.style.backgroundImage = `url("${heroImages[heroIndex]}")`;
+        heroBg.style.opacity = "1";
+      }, 500);
+    }, 3600);
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(startHeroCycle, { timeout: 4500 });
+  } else {
+    window.addEventListener("load", () => setTimeout(startHeroCycle, 1200), { once: true });
+  }
 }
 
 const navShell = document.getElementById("navShell");
@@ -558,6 +566,22 @@ const loadTranslationCatalog = async () => {
   }
 };
 
+const scheduleTranslationCatalogLoad = () => {
+  const loadWhenIdle = () => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(loadTranslationCatalog, { timeout: 3500 });
+      return;
+    }
+    setTimeout(loadTranslationCatalog, 1500);
+  };
+
+  if (document.readyState === "complete") {
+    loadWhenIdle();
+    return;
+  }
+  window.addEventListener("load", loadWhenIdle, { once: true });
+};
+
 if (navShell && menuToggle) {
   menuToggle.addEventListener("click", () => {
     const open = navShell.classList.toggle("is-open");
@@ -759,4 +783,4 @@ if (registrationForm) {
 
 injectLanguageSwitcher();
 applyTranslations(currentLanguage);
-loadTranslationCatalog();
+scheduleTranslationCatalogLoad();

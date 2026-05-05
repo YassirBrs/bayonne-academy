@@ -20,8 +20,9 @@
     <meta name="twitter:title" content="Bayan Academy">
     <meta name="twitter:description" content="Masterclasses d’arabe pour adultes et programme dédié aux enfants.">
     <meta name="twitter:image" content="https://yassirbrs.github.io/bayonne-academy/assets/images/arabe.webp">
-    <link rel="preload" as="image" href="assets/images/hero-1.webp">
-    <link rel="stylesheet" href="assets/css/style.css?v=programme-details">
+    <link rel="preload" as="image" href="assets/images/hero-1.webp" fetchpriority="high">
+    <link rel="preload" href="assets/css/style.css?v=performance-pass" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css?v=performance-pass"></noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -49,7 +50,7 @@
     <header class="site-header" aria-label="Navigation principale">
       <div class="nav-shell" id="navShell">
         <a class="brand" href="index.html" aria-label="Bayan Academy">
-          <img loading="lazy" decoding="async" src="assets/images/icon.png" alt="">
+          <img loading="eager" decoding="async" src="assets/images/icon.png" alt="" width="96" height="96">
           <span>Bayan Academy</span>
         </a>
         <nav class="nav-links" aria-label="Menu">
@@ -74,7 +75,7 @@
 
     <main id="main-content">
       <section class="hero" id="accueil">
-        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-bg" id="heroBg" style="background-image: url('assets/images/hero-1.webp');"></div>
         <div class="hero-content">
           <div class="hero-kicker">Les inscriptions sont ouvertes</div>
           <h1>Bayan Academy</h1>
@@ -118,7 +119,7 @@
 
             <div class="formation-grid">
               <a class="formation-card" href="programme-masterclasses-arabe.html">
-                <img loading="lazy" decoding="async" src="assets/images/arabe.webp" alt="Masterclasses d’arabe">
+                <img loading="lazy" decoding="async" src="assets/images/arabe.webp" alt="Masterclasses d’arabe" width="768" height="713">
                 <div class="formation-card-body">
                   <h3>Masterclasses d’arabe</h3>
                   <p>Apprendre l’arabe, renforcer la lecture et améliorer la communication.</p>
@@ -126,7 +127,7 @@
                 </div>
               </a>
               <a class="formation-card" href="programme-arabe-enfants.html">
-                <img loading="lazy" decoding="async" src="assets/images/hero-3.webp" alt="Programme arabe pour enfants">
+                <img loading="lazy" decoding="async" src="assets/images/hero-3.webp" alt="Programme arabe pour enfants" width="768" height="713">
                 <div class="formation-card-body">
                   <h3>Programme enfants</h3>
                   <p>Un cadre progressif pour aider les enfants à lire, comprendre et s’exprimer en arabe.</p>
@@ -351,7 +352,7 @@
       <section class="section">
         <div class="section-inner featured">
           <div class="featured-media">
-            <img loading="lazy" decoding="async" src="assets/images/arabe.webp" alt="Masterclasses d’arabe">
+            <img loading="lazy" decoding="async" src="assets/images/arabe.webp" alt="Masterclasses d’arabe" width="768" height="713">
           </div>
           <div>
             <h2>Masterclasses d’arabe</h2>
@@ -434,7 +435,7 @@
       <div class="footer-top">
         <div>
           <div class="footer-logo">
-            <img loading="lazy" decoding="async" src="assets/images/icon.png" alt="">
+            <img loading="lazy" decoding="async" src="assets/images/icon.png" alt="" width="96" height="96">
             <span>Bayan Academy</span>
           </div>
           <p>Masterclasses d’arabe pour adultes et programme dédié aux enfants.</p>
@@ -470,6 +471,6 @@
     </footer>
 
     <a class="whatsapp" href="https://wa.me/212697965070" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-    <script src="assets/js/main.js?v=programme-details"></script>
+    <script src="assets/js/main.js?v=performance-pass" defer></script>
   </body>
 </html>
