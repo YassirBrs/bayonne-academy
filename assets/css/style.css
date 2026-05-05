@@ -174,6 +174,36 @@ h3 {
   gap: 10px;
 }
 
+.language-switcher {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-radius: 999px;
+  background: rgba(26, 26, 26, 0.72);
+}
+
+.language-switcher button {
+  min-width: 38px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.language-switcher button.is-active {
+  background: var(--brand-gold);
+  color: var(--brand-charcoal);
+}
+
 .icon-btn,
 .menu-toggle {
   width: 38px;
@@ -1445,6 +1475,17 @@ h1 {
 
   .brand span {
     max-width: 124px;
+  }
+
+  .language-switcher {
+    min-height: 34px;
+    padding: 3px;
+  }
+
+  .language-switcher button {
+    min-width: 32px;
+    min-height: 26px;
+    font-size: 11px;
   }
 
   .hero {
