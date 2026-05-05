@@ -12,10 +12,10 @@ const articles = [
     "monthlySearches": 50000,
     "frTitle": "Learn Arabic: apprendre l’arabe avec une méthode claire",
     "enTitle": "Learn Arabic: A Clear Method for Beginners",
-    "frSummary": "Le mot-clé le plus recherché du fichier est “learn arabic”: voici une méthode simple pour apprendre l’arabe sans se disperser.",
-    "enSummary": "The strongest keyword in the file is “learn arabic”: here is a simple method to learn Arabic without getting scattered.",
-    "frNeed": "Les recherches montrent une demande très forte pour “learn arabic”. Derrière cette requête, l’intention est large: trouver une méthode, comprendre par où commencer et éviter de perdre du temps avec trop de ressources.",
-    "enNeed": "The keyword data shows very strong demand for “learn arabic”. Behind this query is a broad intent: finding a method, knowing where to start and avoiding wasted time with too many resources.",
+    "frSummary": "Une méthode simple pour apprendre l’arabe pas à pas, sans se disperser entre trop de ressources.",
+    "enSummary": "A simple method to learn Arabic step by step without getting scattered across too many resources.",
+    "frNeed": "Beaucoup d’apprenants veulent commencer l’arabe, mais ne savent pas dans quel ordre travailler. Le plus important est de choisir une méthode claire, progressive et adaptée au niveau réel.",
+    "enNeed": "Many learners want to start Arabic but do not know which order to follow. The most important step is choosing a clear, progressive method adapted to the real level.",
     "frMethod": "Commencez par trois piliers: alphabet et sons, lecture courte, puis phrases utiles. Une progression équilibrée donne de meilleurs résultats qu’une accumulation de vidéos ou de listes de mots.",
     "enMethod": "Start with three pillars: alphabet and sounds, short reading, then useful sentences. A balanced progression works better than collecting videos or word lists.",
     "tipsFr": [
@@ -41,10 +41,10 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Apprendre l’arabe facilement: méthode réaliste et progressive",
     "enTitle": "Learn Arabic Easily: A Realistic Progressive Method",
-    "frSummary": "“Apprendre l arabe facilement” ressort comme une recherche forte: l’objectif est de rendre la progression claire, pas magique.",
-    "enSummary": "“Apprendre l arabe facilement” appears as a strong query: the goal is to make progress clear, not magical.",
-    "frNeed": "L’expression “apprendre l’arabe facilement” montre que les utilisateurs cherchent une méthode accessible. Il faut donc expliquer comment simplifier l’apprentissage sans promettre une progression irréaliste.",
-    "enNeed": "The query “apprendre l’arabe facilement” shows that users want an accessible method. The content should explain how to simplify learning without promising unrealistic progress.",
+    "frSummary": "Une approche réaliste pour rendre l’apprentissage de l’arabe plus clair, plus régulier et moins intimidant.",
+    "enSummary": "A realistic approach to make Arabic learning clearer, steadier and less intimidating.",
+    "frNeed": "Apprendre l’arabe devient plus simple quand le parcours est découpé en petites étapes. La facilité vient surtout de la régularité, du bon ordre et d’une correction adaptée.",
+    "enNeed": "Arabic becomes easier when the path is divided into small steps. Ease comes mainly from consistency, the right order and adapted correction.",
     "frMethod": "Divisez chaque séance en quatre temps: reconnaître, lire, comprendre, parler. Cette structure rend la langue moins intimidante et permet de suivre les progrès semaine après semaine.",
     "enMethod": "Split each session into four moments: recognize, read, understand and speak. This structure makes the language less intimidating and makes progress easier to track.",
     "tipsFr": [
@@ -70,8 +70,8 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Cours d’arabe en ligne: comment choisir le bon programme",
     "enTitle": "Online Arabic Classes: How to Choose the Right Programme",
-    "frSummary": "Le cluster “cours d arabe en ligne” a un volume important et une intention claire de réservation ou comparaison.",
-    "enSummary": "The “cours d arabe en ligne” cluster has meaningful volume and a clear booking or comparison intent.",
+    "frSummary": "Les critères essentiels pour choisir un cours d’arabe en ligne sérieux, flexible et adapté à votre niveau.",
+    "enSummary": "The essential criteria for choosing a serious, flexible online Arabic class adapted to your level.",
     "frNeed": "Quand une personne cherche un cours d’arabe en ligne, elle compare souvent les formats, les tarifs, le niveau et la qualité du suivi. La page doit répondre à ces critères rapidement.",
     "enNeed": "When someone searches for online Arabic classes, they often compare formats, pricing, level and follow-up quality. The page must answer those points quickly.",
     "frMethod": "Vérifiez si le programme propose une évaluation, un rythme clair, des séances de durée adaptée et un échange simple avec l’équipe avant l’inscription.",
@@ -99,8 +99,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Cours arabe débutant: que doit contenir une bonne première étape ?",
     "enTitle": "Beginner Arabic Course: What Should the First Step Include?",
-    "frSummary": "Le fichier contient plusieurs variantes de “cours arabe débutant”: voici les critères d’un bon parcours de départ.",
-    "enSummary": "The file contains several variants of “cours arabe débutant”: here are the criteria for a good starting path.",
+    "frSummary": "Ce qu’un bon cours d’arabe débutant doit contenir pour construire des bases solides dès le départ.",
+    "enSummary": "What a good beginner Arabic course should include to build solid foundations from the start.",
     "frNeed": "Un débutant ne doit pas recevoir un cours trop dense. La priorité est de construire une base stable: sons, lettres, lecture lente, vocabulaire utile et premières phrases.",
     "enNeed": "A beginner should not receive an overloaded course. The priority is a stable base: sounds, letters, slow reading, useful vocabulary and first sentences.",
     "frMethod": "Le bon cours commence par une évaluation simple, puis avance par petits blocs. Chaque séance doit produire un résultat visible: lire un mot, comprendre une phrase ou répondre simplement.",
@@ -128,10 +128,10 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Parler arabe: passer du vocabulaire aux vraies phrases",
     "enTitle": "Speak Arabic: Move from Vocabulary to Real Sentences",
-    "frSummary": "“Parler arabe” a un volume élevé et demande un contenu orienté pratique orale.",
-    "enSummary": "“Parler arabe” has high volume and needs content focused on oral practice.",
-    "frNeed": "La requête “parler arabe” montre une intention pratique. Les utilisateurs ne veulent pas seulement lire: ils veulent comprendre, répondre et dialoguer avec plus d’aisance.",
-    "enNeed": "The query “parler arabe” shows practical intent. Users do not only want to read: they want to understand, answer and hold simple conversations more confidently.",
+    "frSummary": "Comment passer du vocabulaire isolé à des phrases utiles pour parler arabe avec plus d’aisance.",
+    "enSummary": "How to move from isolated vocabulary to useful sentences so you can speak Arabic with more ease.",
+    "frNeed": "Parler arabe demande plus que mémoriser des mots. Il faut apprendre à comprendre une question, construire une réponse et répéter des situations proches de la vie réelle.",
+    "enNeed": "Speaking Arabic requires more than memorizing words. You need to understand a question, build an answer and repeat situations close to real life.",
     "frMethod": "Travaillez les questions fréquentes, les réponses modèles et les mini-dialogues. Répéter une phrase utile avec plusieurs variations crée une vraie aisance.",
     "enMethod": "Work on frequent questions, model answers and mini-dialogues. Repeating a useful sentence with several variations creates real ease.",
     "tipsFr": [
@@ -157,8 +157,8 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Apprendre l’arabe gratuitement: que faire avant un programme accompagné ?",
     "enTitle": "Learn Arabic for Free: What to Do Before a Guided Programme",
-    "frSummary": "La recherche “apprendre l arabe gratuitement” est forte: voici comment utiliser le gratuit sans rester bloqué.",
-    "enSummary": "The query “apprendre l arabe gratuitement” is strong: here is how to use free resources without getting stuck.",
+    "frSummary": "Comment utiliser les ressources gratuites intelligemment avant de passer à un programme accompagné.",
+    "enSummary": "How to use free resources wisely before moving to a guided programme.",
     "frNeed": "Les ressources gratuites peuvent aider à découvrir la langue, mais elles manquent souvent de correction, de rythme et d’évaluation. Il faut donc les utiliser avec une stratégie.",
     "enNeed": "Free resources can help you discover the language, but they often lack correction, pace and evaluation. They should be used with a strategy.",
     "frMethod": "Utilisez le gratuit pour tester l’alphabet, écouter les sons et mémoriser quelques phrases. Ensuite, faites vérifier votre niveau pour éviter de répéter les mêmes erreurs.",
@@ -186,8 +186,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Apprendre l’arabe en ligne: construire une routine efficace",
     "enTitle": "Learn Arabic Online: Build an Effective Routine",
-    "frSummary": "Le mot-clé “apprendre l arabe en ligne” combine besoin de méthode, flexibilité et accompagnement.",
-    "enSummary": "The keyword “apprendre l arabe en ligne” combines method, flexibility and guided support needs.",
+    "frSummary": "Une routine simple pour apprendre l’arabe en ligne avec méthode, flexibilité et suivi régulier.",
+    "enSummary": "A simple routine to learn Arabic online with method, flexibility and regular support.",
     "frNeed": "L’apprentissage en ligne fonctionne quand le cadre est visible. Sans planning, sans correction et sans objectif, l’étudiant peut vite accumuler des ressources sans progresser.",
     "enNeed": "Online learning works when the structure is visible. Without planning, correction and goals, a student can quickly collect resources without progressing.",
     "frMethod": "Planifiez des séances fixes, une révision courte entre les cours et un objectif par semaine: lire plus fluide, comprendre un thème ou répondre à des questions simples.",
@@ -215,10 +215,10 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Cours arabe: les critères pour choisir une formation utile",
     "enTitle": "Arabic Course: Criteria for Choosing Useful Training",
-    "frSummary": "“Cours arabe” et “cours en arabe” ont un volume élevé: cette page répond aux critères de choix.",
-    "enSummary": "“Cours arabe” and “cours en arabe” have high volume: this page answers selection criteria.",
-    "frNeed": "Une recherche générique comme “cours arabe” peut cacher plusieurs besoins: débuter, reprendre les bases, parler, lire plus vite ou accompagner un enfant.",
-    "enNeed": "A generic search like “cours arabe” can hide several needs: starting, rebuilding foundations, speaking, reading faster or supporting a child.",
+    "frSummary": "Les critères à vérifier avant de choisir un cours d’arabe vraiment utile pour votre objectif.",
+    "enSummary": "The criteria to check before choosing an Arabic course that is truly useful for your goal.",
+    "frNeed": "Un cours d’arabe peut répondre à plusieurs besoins: débuter, reprendre les bases, parler, lire plus vite ou accompagner un enfant. Le bon choix dépend de l’objectif réel.",
+    "enNeed": "An Arabic course can answer several needs: starting, rebuilding foundations, speaking, reading faster or supporting a child. The right choice depends on the real goal.",
     "frMethod": "Avant de réserver, clarifiez l’objectif principal, le niveau actuel, le format souhaité et la fréquence possible. Ces éléments orientent vers le bon programme.",
     "enMethod": "Before booking, clarify the main goal, current level, preferred format and possible frequency. These elements point to the right programme.",
     "tipsFr": [
@@ -244,8 +244,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Alphabet arabe facile: apprendre les lettres sans confusion",
     "enTitle": "Easy Arabic Alphabet: Learn Letters Without Confusion",
-    "frSummary": "Le cluster alphabet ressort dans le fichier: l’objectif est de simplifier les formes, les sons et la lecture.",
-    "enSummary": "The alphabet cluster appears in the file: the goal is to simplify shapes, sounds and reading.",
+    "frSummary": "Une méthode simple pour apprendre l’alphabet arabe sans confusion entre les formes et les sons.",
+    "enSummary": "A simple method to learn the Arabic alphabet without confusion between shapes and sounds.",
     "frNeed": "L’alphabet arabe paraît difficile parce que les lettres changent de forme selon leur position. Une méthode facile présente peu de lettres à la fois et les relie rapidement à des mots.",
     "enNeed": "The Arabic alphabet seems difficult because letters change shape depending on position. An easy method introduces a few letters at a time and quickly connects them to words.",
     "frMethod": "Apprenez un petit groupe de lettres, prononcez-les, écrivez-les puis lisez des syllabes courtes. Le passage rapide à la lecture évite l’apprentissage abstrait.",
@@ -273,8 +273,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Alphabet arabe PDF pour les petits: comment l’utiliser intelligemment",
     "enTitle": "Arabic Alphabet PDF for Children: How to Use It Well",
-    "frSummary": "Le fichier contient des recherches autour de PDF alphabet pour enfants: voici comment en faire un support utile.",
-    "enSummary": "The file contains searches around alphabet PDFs for children: here is how to turn them into useful support.",
+    "frSummary": "Comment utiliser un PDF d’alphabet arabe avec un enfant sans remplacer l’écoute, l’oral et la pratique.",
+    "enSummary": "How to use an Arabic alphabet PDF with a child without replacing listening, speaking and practice.",
     "frNeed": "Un PDF d’alphabet peut aider un enfant, mais il ne suffit pas. L’enfant a besoin d’entendre le son, de reconnaître la lettre et de l’utiliser dans un mot concret.",
     "enNeed": "An alphabet PDF can help a child, but it is not enough. The child needs to hear the sound, recognize the letter and use it in a concrete word.",
     "frMethod": "Utilisez une fiche courte, une image, un son et un mot. La séance doit rester légère pour garder la motivation et la concentration.",
@@ -302,8 +302,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Apprendre à lire l’arabe: étapes pour gagner en fluidité",
     "enTitle": "Learn to Read Arabic: Steps to Build Fluency",
-    "frSummary": "La requête “apprendre à lire l arabe” montre une intention claire: lire mieux, plus vite et avec compréhension.",
-    "enSummary": "The query “apprendre à lire l arabe” shows clear intent: read better, faster and with comprehension.",
+    "frSummary": "Les étapes essentielles pour apprendre à lire l’arabe avec plus de fluidité et de compréhension.",
+    "enSummary": "The essential steps to learn to read Arabic with more fluency and comprehension.",
     "frNeed": "Lire l’arabe ne consiste pas seulement à reconnaître les lettres. Il faut travailler le son, l’enchaînement, le rythme et la compréhension des mots.",
     "enNeed": "Reading Arabic is not only about recognizing letters. You must work on sound, flow, rhythm and word comprehension.",
     "frMethod": "Lisez un texte court, identifiez les hésitations, corrigez un point précis puis relisez. Cette boucle crée une fluidité réelle.",
@@ -331,8 +331,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Lecture arabe débutant: exercices simples pour progresser",
     "enTitle": "Beginner Arabic Reading: Simple Exercises to Improve",
-    "frSummary": "Le cluster “lecture arabe débutant” demande des conseils concrets pour lire sans blocage.",
-    "enSummary": "The “lecture arabe débutant” cluster needs concrete advice to read without blocking.",
+    "frSummary": "Des exercices simples pour aider les débutants à lire l’arabe sans blocage ni surcharge.",
+    "enSummary": "Simple exercises to help beginners read Arabic without blocking or overload.",
     "frNeed": "Un débutant bloque souvent sur les mêmes points: confusions de lettres, sons proches, lenteur et manque de vocabulaire. Les exercices doivent cibler ces obstacles.",
     "enNeed": "Beginners often block on the same points: letter confusion, close sounds, slow pace and limited vocabulary. Exercises should target these obstacles.",
     "frMethod": "Alternez syllabes, mots courts, phrases simples et relecture. La relecture est essentielle car elle transforme l’effort initial en fluidité.",
@@ -360,8 +360,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Apprendre l’arabe PDF: avantages, limites et méthode",
     "enTitle": "Learn Arabic PDF: Benefits, Limits and Method",
-    "frSummary": "Les recherches PDF sont nombreuses: elles montrent un besoin de support pratique, mais aussi de cadre.",
-    "enSummary": "PDF searches are frequent: they show a need for practical material, but also for structure.",
+    "frSummary": "Les avantages et les limites des supports PDF pour apprendre l’arabe avec une vraie méthode.",
+    "enSummary": "The benefits and limits of PDF materials when learning Arabic with a real method.",
     "frNeed": "Un PDF peut structurer la révision, mais il ne corrige pas la prononciation et ne vérifie pas la compréhension. Il doit compléter une méthode, pas la remplacer.",
     "enNeed": "A PDF can structure review, but it does not correct pronunciation or check comprehension. It should support a method, not replace it.",
     "frMethod": "Utilisez le PDF comme fiche de révision: une page, un objectif, un exercice oral. Puis demandez une correction sur les points qui restent difficiles.",
@@ -389,14 +389,14 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Cours d’arabe gratuit PDF: comment réviser sans se perdre",
     "enTitle": "Free Arabic Course PDF: How to Review Without Getting Lost",
-    "frSummary": "Les requêtes “cours d arabe gratuit pdf” et “apprendre gratuitement” signalent une recherche de support accessible.",
-    "enSummary": "Queries like “cours d arabe gratuit pdf” and free learning show demand for accessible support.",
-    "frNeed": "Le gratuit attire beaucoup de recherches, mais l’enjeu est d’éviter la dispersion. Trop de supports gratuits peuvent ralentir la progression s’ils ne suivent pas un ordre clair.",
-    "enNeed": "Free resources attract many searches, but the challenge is avoiding dispersion. Too many free materials can slow progress if they do not follow a clear order.",
+    "frSummary": "Comment réviser avec un cours d’arabe gratuit en PDF sans se perdre entre trop de supports.",
+    "enSummary": "How to review with a free Arabic course PDF without getting lost between too many materials.",
+    "frNeed": "Les supports gratuits peuvent être utiles, mais l’enjeu est d’éviter la dispersion. Trop de ressources peuvent ralentir la progression si elles ne suivent pas un ordre clair.",
+    "enNeed": "Free resources can be useful, but the challenge is avoiding dispersion. Too many files can slow progress if they do not follow a clear order.",
     "frMethod": "Gardez un seul support pendant deux semaines, suivez les exercices dans l’ordre, puis faites un bilan: lecture, vocabulaire, compréhension et oral.",
     "enMethod": "Keep one resource for two weeks, follow exercises in order, then review: reading, vocabulary, comprehension and speaking.",
     "tipsFr": [
-      "Éviter de télécharger trop de fichiers",
+      "Éviter d’accumuler trop de supports",
       "Créer une routine courte",
       "Suivre un ordre",
       "Demander une orientation si besoin"
@@ -418,8 +418,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Apprendre les chiffres arabes: méthode simple et mémorisation",
     "enTitle": "Learn Arabic Numbers: Simple Method and Memorization",
-    "frSummary": "Les variantes autour des chiffres arabes ont un volume intéressant et conviennent à un contenu pédagogique précis.",
-    "enSummary": "Variants around Arabic numbers have useful volume and fit precise educational content.",
+    "frSummary": "Une méthode simple pour apprendre les chiffres arabes et les utiliser dans des phrases concrètes.",
+    "enSummary": "A simple method to learn Arabic numbers and use them in practical sentences.",
     "frNeed": "Les chiffres sont utiles pour lire des dates, compter, comprendre un prix ou suivre une consigne. Ils donnent aussi une première victoire rapide aux débutants.",
     "enNeed": "Numbers are useful for reading dates, counting, understanding a price or following instructions. They also give beginners a quick first win.",
     "frMethod": "Apprenez les chiffres par petits groupes, dites-les à voix haute, puis utilisez-les dans des phrases simples comme l’âge, l’heure ou le nombre d’objets.",
@@ -447,8 +447,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Apprendre l’arabe littéraire: pour qui et par où commencer ?",
     "enTitle": "Learn Literary Arabic: Who Is It For and Where to Start?",
-    "frSummary": "Le fichier contient plusieurs requêtes autour de l’arabe littéraire, avec une intention de formation structurée.",
-    "enSummary": "The file contains several queries around literary Arabic, with structured learning intent.",
+    "frSummary": "À qui s’adresse l’arabe littéraire et comment commencer avec un parcours structuré.",
+    "enSummary": "Who literary Arabic is for and how to start with a structured learning path.",
     "frNeed": "L’arabe littéraire attire les étudiants qui veulent lire, comprendre des textes et construire une base solide. Il demande une progression plus structurée que des phrases isolées.",
     "enNeed": "Literary Arabic attracts students who want to read, understand texts and build a solid base. It requires a more structured progression than isolated phrases.",
     "frMethod": "Commencez par lecture et vocabulaire essentiel, puis ajoutez les structures fréquentes. L’expression orale peut accompagner le parcours pour garder la langue vivante.",
@@ -476,10 +476,10 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Apprendre darija ou arabe littéraire: quelle différence ?",
     "enTitle": "Learn Darija or Standard Arabic: What Is the Difference?",
-    "frSummary": "Le cluster darija est très présent dans le CSV: voici comment l’expliquer sans confondre les offres.",
-    "enSummary": "The Darija cluster is very present in the CSV: here is how to explain it without confusing the offer.",
-    "frNeed": "Beaucoup de recherches portent sur “apprendre darija” ou “apprendre la darija”. L’intention est souvent de communiquer au Maroc, tandis que l’arabe littéraire vise une base plus large de lecture et compréhension.",
-    "enNeed": "Many searches target “apprendre darija” or Moroccan Arabic. The intent is often communication in Morocco, while Standard Arabic gives a broader base for reading and comprehension.",
+    "frSummary": "Les différences entre darija et arabe littéraire pour choisir le parcours le plus adapté à votre usage.",
+    "enSummary": "The differences between Darija and Standard Arabic so you can choose the path that fits your use.",
+    "frNeed": "La darija sert surtout à communiquer dans le contexte marocain, tandis que l’arabe littéraire vise une base plus large de lecture, compréhension et expression structurée.",
+    "enNeed": "Darija is mainly useful for communication in the Moroccan context, while Standard Arabic gives a broader base for reading, comprehension and structured expression.",
     "frMethod": "Si votre objectif est familial ou voyage au Maroc, la darija peut être utile. Si vous voulez lire, comprendre et construire une base durable, commencez par l’arabe structuré.",
     "enMethod": "If your goal is family or travel in Morocco, Darija can be useful. If you want to read, understand and build a lasting base, start with structured Arabic.",
     "tipsFr": [
@@ -505,8 +505,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Arabe pour enfants: apprendre sans pression et avec régularité",
     "enTitle": "Arabic for Children: Learn Without Pressure and with Consistency",
-    "frSummary": "Les recherches autour des petits et des enfants demandent une réponse rassurante pour les parents.",
-    "enSummary": "Searches around young children need a reassuring answer for parents.",
+    "frSummary": "Comment aider un enfant à apprendre l’arabe avec régularité, plaisir et objectifs adaptés.",
+    "enSummary": "How to help a child learn Arabic with consistency, enjoyment and adapted goals.",
     "frNeed": "Pour les enfants, l’enjeu n’est pas seulement d’apprendre vite. Il faut préserver la motivation, adapter la durée et donner aux parents un retour clair.",
     "enNeed": "For children, the challenge is not only learning fast. Motivation must be protected, duration adapted and parents given clear feedback.",
     "frMethod": "Travaillez par objectifs courts: lettres, sons, mots, image, phrase. L’enfant doit voir une réussite simple à chaque étape.",
@@ -534,8 +534,8 @@ const articles = [
     "monthlySearches": 5000,
     "frTitle": "Duolingo arabe et applications: suffisant pour apprendre l’arabe ?",
     "enTitle": "Duolingo Arabic and Apps: Are They Enough to Learn Arabic?",
-    "frSummary": "“duolingo arab” ressort avec un fort volume: cet article compare application et accompagnement humain.",
-    "enSummary": "“duolingo arab” appears with strong volume: this article compares apps and human guidance.",
+    "frSummary": "Ce que les applications peuvent apporter, et pourquoi l’accompagnement humain reste important.",
+    "enSummary": "What apps can offer, and why human guidance still matters.",
     "frNeed": "Les applications aident à créer une habitude, mais elles ne répondent pas toujours aux besoins de correction, de prononciation et de progression personnalisée.",
     "enNeed": "Apps help create a habit, but they do not always cover correction, pronunciation and personalized progression needs.",
     "frMethod": "Utilisez une application pour réviser, pas comme seul parcours. Ajoutez une évaluation, une correction orale et un programme adapté à votre objectif.",
@@ -563,8 +563,8 @@ const articles = [
     "monthlySearches": 500,
     "frTitle": "Tarifs cours arabe en ligne: que comparer avant de payer ?",
     "enTitle": "Online Arabic Course Pricing: What to Compare Before Paying",
-    "frSummary": "Le CSV indique une forte valeur commerciale autour des cours en ligne: cet article aide à comparer les tarifs intelligemment.",
-    "enSummary": "The CSV indicates strong commercial value around online classes: this article helps compare pricing intelligently.",
+    "frSummary": "Les points à comparer avant de payer un cours d’arabe en ligne: durée, format, suivi et objectifs.",
+    "enSummary": "What to compare before paying for an online Arabic class: duration, format, support and goals.",
     "frNeed": "Le prix d’un cours d’arabe en ligne doit être comparé avec la durée, le format, l’évaluation, le suivi et les objectifs couverts.",
     "enNeed": "The price of an online Arabic course should be compared with duration, format, evaluation, follow-up and covered goals.",
     "frMethod": "Regardez le prix mensuel, le paiement complet, la durée des séances et ce qui se passe avant la première séance. Un tarif clair réduit l’hésitation.",
@@ -656,10 +656,10 @@ const articleStructuredData = (article) => JSON.stringify({
 
 const tipsList = (items) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 
-const learningPlanFr = (article) => [
+const learningPlanFr = () => [
   {
     title: "Semaine 1: clarifier le niveau",
-    text: `Notez ce que vous savez déjà faire autour de “${article.focusKeyword}”: lettres, lecture, compréhension, phrases ou besoin enfant. Cette étape évite de choisir un parcours trop facile ou trop avancé.`
+    text: "Notez ce que vous savez déjà faire: lettres, lecture, compréhension, phrases ou besoin enfant. Cette étape évite de choisir un parcours trop facile ou trop avancé."
   },
   {
     title: "Semaine 2: travailler une base courte",
@@ -675,10 +675,10 @@ const learningPlanFr = (article) => [
   }
 ];
 
-const learningPlanEn = (article) => [
+const learningPlanEn = () => [
   {
     title: "Week 1: clarify the level",
-    text: `Write down what you can already do around “${article.focusKeyword}”: letters, reading, comprehension, sentences or children’s learning needs. This avoids choosing a path that is too easy or too advanced.`
+    text: "Write down what you can already do: letters, reading, comprehension, sentences or children’s learning needs. This avoids choosing a path that is too easy or too advanced."
   },
   {
     title: "Week 2: build one short foundation",
@@ -710,7 +710,7 @@ const mistakesEn = [
 
 const faqFr = (article) => [
   {
-    question: `${article.focusKeyword}: par où commencer ?`,
+    question: "Par où commencer ?",
     answer: article.frMethod
   },
   {
@@ -725,7 +725,7 @@ const faqFr = (article) => [
 
 const faqEn = (article) => [
   {
-    question: `${article.focusKeyword}: where should I start?`,
+    question: "Where should I start?",
     answer: article.enMethod
   },
   {
@@ -786,7 +786,7 @@ const articlePage = (article) => `<!doctype html>
       <section class="section">
         <div class="section-inner article-layout">
           <article class="article-content" data-lang-panel="fr" lang="fr">
-            <p class="article-meta">Guide arabe • Mot-clé: ${escapeHtml(article.focusKeyword)} • ${article.monthlySearches.toLocaleString("fr-FR")} recherches/mois • Lecture 7 minutes</p>
+            <p class="article-meta">Guide Bayan Academy • Lecture 7 minutes</p>
             <h2>Pourquoi c’est important</h2>
             <p>${escapeHtml(article.frNeed)}</p>
             <div class="article-highlight">
@@ -809,7 +809,7 @@ const articlePage = (article) => `<!doctype html>
             <div class="faq-list article-faq">${faqMarkup(faqFr(article))}</div>
           </article>
           <article class="article-content" data-lang-panel="en" lang="en">
-            <p class="article-meta">Arabic guide • Keyword: ${escapeHtml(article.focusKeyword)} • ${article.monthlySearches.toLocaleString("en-US")} searches/month • 7 minute read</p>
+            <p class="article-meta">Bayan Academy guide • 7 minute read</p>
             <h2>Why it matters</h2>
             <p>${escapeHtml(article.enNeed)}</p>
             <div class="article-highlight">
