@@ -16,3 +16,11 @@
 - Added skip links, visible focus states, reduced-motion handling, mobile menu scroll locking, and stronger form handoff behavior.
 - Added homepage trust signals and FAQ content to improve user clarity and search relevance.
 - Verified local page references, CSS image references, JavaScript syntax, core landmarks, and browser console health.
+
+## Bayan Academy Palette Refresh
+
+- [x] Extract logo palette: gold `#c5a059`, charcoal-black `#1a1a1a`, and soft cream text `#f6ead2`.
+- [x] Refactor `:root` variables to use the Bayan Academy brand palette.
+- [x] Rework cards, forms, navigation, footer, and section bands for dark surfaces with gold accents.
+- [x] Update browser theme and manifest colors to match the charcoal brand background.
+- [x] Verify syntax, local references, and browser rendering after the palette change.
