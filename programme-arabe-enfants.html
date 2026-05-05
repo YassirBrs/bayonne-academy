@@ -51,6 +51,7 @@
               <div class="summary-row"><strong>Public</strong><span>Enfants, niveau débutant à intermédiaire</span></div>
               <div class="summary-row"><strong>Formats</strong><span>Individualisé ou en groupe</span></div>
               <div class="summary-row"><strong>Durée</strong><span>Sessions de 1h à 2h selon l’âge</span></div>
+              <div class="summary-row"><strong>Tarif</strong><span>Dès 41.50 €/mois selon le parcours choisi</span></div>
             </div>
             <button class="button" type="button" data-open-registration data-programme="Programme arabe enfants">Start With Us</button>
           </div>
@@ -59,6 +60,46 @@
             <article class="detail-card"><h3>Vocabulaire</h3><p>Thèmes proches du quotidien pour apprendre avec plus de sens.</p></article>
             <article class="detail-card"><h3>Compréhension</h3><p>Questions simples, images, consignes et reformulation adaptée à l’âge.</p></article>
             <article class="detail-card"><h3>Expression</h3><p>Petites phrases, dialogues courts et confiance dans la prise de parole.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="tarifs">
+        <div class="section-inner">
+          <div class="section-lead">
+            <span class="eyebrow">Tarifs enfants</span>
+            <h2>Un choix simple pour les parents</h2>
+            <p>Sélectionnez le rythme et le format dans le formulaire. L’équipe confirme ensuite le créneau, le niveau et la disponibilité sur WhatsApp.</p>
+          </div>
+          <div class="price-grid">
+            <article class="price-card featured-price">
+              <span class="price-label">Enfants</span>
+              <h3>Parcours arabe enfants</h3>
+              <p class="price-amount">Dès 41.50 €/mois</p>
+              <p class="price-note">Lecture, vocabulaire, compréhension et expression orale avec un rythme adapté.</p>
+              <button class="button" type="button" data-open-registration data-programme="Programme arabe enfants" data-package="Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois">Réserver ce parcours</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Individuel</span>
+              <h3>Programme individualisé</h3>
+              <p class="price-amount">Dès 38.50 €/mois</p>
+              <p class="price-note">Pour accompagner un enfant avec un objectif précis ou un besoin de suivi rapproché.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Programme individualisé enfant" data-package="Programme individualisé enfant - dès 38.50 €/mois">Choisir l’individuel</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Groupe</span>
+              <h3>Groupe enfants</h3>
+              <p class="price-amount">Dès 41.50 €/mois</p>
+              <p class="price-note">Un cadre motivant pour progresser avec d’autres enfants de niveau proche.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Groupe arabe enfants" data-package="Programme en groupe enfant - dès 41.50 €/mois">Choisir le groupe</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Découverte</span>
+              <h3>Masterclass famille</h3>
+              <p class="price-amount">10 €</p>
+              <p class="price-note">Une session courte pour évaluer l’enfant et orienter le bon programme.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclass découverte famille" data-package="Masterclass Découverte famille - 10 €">Démarrer</button>
+            </article>
           </div>
         </div>
       </section>
@@ -93,6 +134,15 @@
           <label>Programme
             <input class="readonly-field" type="text" name="programme" data-programme-field value="Programme arabe enfants" readonly>
           </label>
+          <label>Programme et tarif
+            <select name="package" data-price-select required>
+              <option>Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois</option>
+              <option>Programme individualisé enfant - dès 38.50 €/mois</option>
+              <option>Programme en groupe enfant - dès 41.50 €/mois</option>
+              <option>Masterclass Découverte famille - 10 €</option>
+            </select>
+          </label>
+          <p class="price-summary" data-price-summary>Tarif choisi: Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois</p>
           <div class="modal-grid">
             <label>Sessions par semaine
               <select name="sessions" required><option>1 session</option><option>2 sessions</option><option>3 sessions</option></select>
@@ -111,8 +161,7 @@
           <label>Âge et niveau de l’enfant<input type="text" name="level" placeholder="Ex: 8 ans, débutant"></label>
           <label>Détails utiles<textarea name="details" placeholder="Objectifs, disponibilités, informations sur l’enfant"></textarea></label>
           <div class="modal-actions">
-            <button class="button" type="submit">Ouvrir WhatsApp</button>
-            <button class="button-secondary" type="button" data-close-registration>Annuler</button>
+            <button class="button" type="submit">Continuer sur WhatsApp</button>
           </div>
         </form>
       </div>

@@ -51,6 +51,7 @@
               <div class="summary-row"><strong>Public</strong><span>Adultes et adolescents</span></div>
               <div class="summary-row"><strong>Formats</strong><span>Individualisé ou en groupe</span></div>
               <div class="summary-row"><strong>Durée</strong><span>Sessions de 1h à 2h</span></div>
+              <div class="summary-row"><strong>Tarif</strong><span>Dès 38.50 €/mois ou 385 € en paiement complet</span></div>
             </div>
             <button class="button" type="button" data-open-registration data-programme="Masterclasses d’arabe">Start With Us</button>
           </div>
@@ -59,6 +60,46 @@
             <article class="detail-card"><h3>Compréhension</h3><p>Vocabulaire utile, phrases fréquentes et repères pour lire avec sens.</p></article>
             <article class="detail-card"><h3>Communication</h3><p>Pratique guidée pour formuler, répondre et gagner en confiance.</p></article>
             <article class="detail-card"><h3>Suivi</h3><p>Objectifs par séance, exercices ciblés et ajustements selon votre niveau.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="tarifs">
+        <div class="section-inner">
+          <div class="section-lead">
+            <span class="eyebrow">Tarifs de référence</span>
+            <h2>Choisissez le parcours qui correspond à votre objectif</h2>
+            <p>Les tarifs sont affichés pour guider la réservation. L’équipe confirme ensuite les disponibilités et le rythme exact sur WhatsApp.</p>
+          </div>
+          <div class="price-grid">
+            <article class="price-card featured-price">
+              <span class="price-label">Parcours complet</span>
+              <h3>Langue arabe</h3>
+              <p class="price-amount">385 €</p>
+              <p class="price-note">Paiement complet pour un parcours structuré lecture, compréhension et communication.</p>
+              <button class="button" type="button" data-open-registration data-programme="Masterclasses d’arabe" data-package="Parcours Langue Arabe complet - 385 €">Réserver ce tarif</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Échelonné</span>
+              <h3>Langue arabe mensuel</h3>
+              <p class="price-amount">38.50 €/mois</p>
+              <p class="price-note">Option échelonnée jusqu’à 10 mois, à confirmer avec l’équipe.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclasses d’arabe" data-package="Paiement échelonné Langue Arabe - 38.50 €/mois pendant 10 mois">Choisir ce rythme</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Expression</span>
+              <h3>Communication arabe</h3>
+              <p class="price-amount">Dès 38.50 €/mois</p>
+              <p class="price-note">Pour travailler vocabulaire, phrases utiles et aisance orale.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Communication arabe" data-package="Communication arabe - dès 38.50 €/mois">Choisir ce parcours</button>
+            </article>
+            <article class="price-card">
+              <span class="price-label">Découverte</span>
+              <h3>Masterclass ciblée</h3>
+              <p class="price-amount">10 €</p>
+              <p class="price-note">Une première session pour clarifier le niveau et choisir le bon programme.</p>
+              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclass découverte" data-package="Masterclass Découverte - 10 €">Démarrer</button>
+            </article>
           </div>
         </div>
       </section>
@@ -93,6 +134,15 @@
           <label>Programme
             <input class="readonly-field" type="text" name="programme" data-programme-field value="Masterclasses d’arabe" readonly>
           </label>
+          <label>Programme et tarif
+            <select name="package" data-price-select required>
+              <option>Parcours Langue Arabe complet - 385 €</option>
+              <option>Paiement échelonné Langue Arabe - 38.50 €/mois pendant 10 mois</option>
+              <option>Communication arabe - dès 38.50 €/mois</option>
+              <option>Masterclass Découverte - 10 €</option>
+            </select>
+          </label>
+          <p class="price-summary" data-price-summary>Tarif choisi: Parcours Langue Arabe complet - 385 €</p>
           <div class="modal-grid">
             <label>Sessions par semaine
               <select name="sessions" required><option>1 session</option><option>2 sessions</option><option>3 sessions</option></select>
@@ -111,8 +161,7 @@
           <label>Niveau actuel<input type="text" name="level" placeholder="Débutant, intermédiaire, avancé"></label>
           <label>Détails utiles<textarea name="details" placeholder="Objectifs, disponibilités, attentes particulières"></textarea></label>
           <div class="modal-actions">
-            <button class="button" type="submit">Ouvrir WhatsApp</button>
-            <button class="button-secondary" type="button" data-close-registration>Annuler</button>
+            <button class="button" type="submit">Continuer sur WhatsApp</button>
           </div>
         </form>
       </div>

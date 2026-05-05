@@ -73,6 +73,17 @@ const registrationModal = document.querySelector("[data-registration-modal]");
 const registrationForm = document.querySelector("[data-registration-form]");
 let lastRegistrationTrigger = null;
 
+const updatePriceSummary = () => {
+  if (!registrationModal) {
+    return;
+  }
+  const packageSelect = registrationModal.querySelector("[data-price-select]");
+  const summary = registrationModal.querySelector("[data-price-summary]");
+  if (packageSelect && summary) {
+    summary.textContent = `Tarif choisi: ${packageSelect.value}`;
+  }
+};
+
 const closeRegistrationModal = () => {
   if (!registrationModal) {
     return;
@@ -93,6 +104,14 @@ const openRegistrationModal = (trigger) => {
   if (programmeField && trigger.dataset.programme) {
     programmeField.value = trigger.dataset.programme;
   }
+  const packageSelect = registrationModal.querySelector("[data-price-select]");
+  if (packageSelect && trigger.dataset.package) {
+    const matchingOption = Array.from(packageSelect.options).find((option) => option.value === trigger.dataset.package || option.textContent === trigger.dataset.package);
+    if (matchingOption) {
+      packageSelect.value = matchingOption.value;
+    }
+  }
+  updatePriceSummary();
   registrationModal.hidden = false;
   document.body.classList.add("menu-open");
   const firstField = registrationModal.querySelector("select, input:not([readonly]), textarea, button");
@@ -121,10 +140,16 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (registrationForm) {
+  const packageSelect = registrationForm.querySelector("[data-price-select]");
+  if (packageSelect) {
+    packageSelect.addEventListener("change", updatePriceSummary);
+    updatePriceSummary();
+  }
+
   registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(registrationForm);
-    const message = encodeURIComponent(`Salam, je souhaite réserver une place chez Bayan Academy.\nProgramme: ${data.get("programme") || ""}\nSessions par semaine: ${data.get("sessions") || ""}\nDurée: ${data.get("duration") || ""}\nFormat: ${data.get("format") || ""}\nNom: ${data.get("name") || ""}\nContact: ${data.get("contact") || ""}\nNiveau / âge: ${data.get("level") || ""}\nDétails: ${data.get("details") || ""}`);
+    const message = encodeURIComponent(`Salam, je souhaite réserver une place chez Bayan Academy.\nProgramme: ${data.get("programme") || ""}\nTarif choisi: ${data.get("package") || ""}\nSessions par semaine: ${data.get("sessions") || ""}\nDurée: ${data.get("duration") || ""}\nFormat: ${data.get("format") || ""}\nNom: ${data.get("name") || ""}\nContact: ${data.get("contact") || ""}\nNiveau / âge: ${data.get("level") || ""}\nDétails: ${data.get("details") || ""}`);
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank", "noopener");
   });
 }
