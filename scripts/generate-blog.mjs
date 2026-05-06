@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 
-const cssVersion = "performance-cls";
-const jsVersion = "blog-seo";
+const cssVersion = "performance-more";
+const jsVersion = "performance-more";
 const baseUrl = "https://yassirbrs.github.io/bayonne-academy";
 
 const articles = [
@@ -597,7 +597,10 @@ const escapeHtml = (value) =>
 const href = (slug) => `${slug}.html`;
 const legacyHref = (slug) => `blog-${slug}.html`;
 
+const earlyThemeScript = `<script>try{document.documentElement.dataset.theme=localStorage.getItem("bayanTheme")==="light"?"light":"dark"}catch(error){document.documentElement.dataset.theme="dark"}</script>`;
+
 const headLinks = (extra = "") => `${extra}
+    ${earlyThemeScript}
     <link rel="stylesheet" href="assets/css/style.css?v=${cssVersion}">`;
 
 const header = (current = "blog") => `<a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -761,7 +764,7 @@ const articlePage = (article) => `<!doctype html>
     <meta property="og:url" content="${baseUrl}/${href(article.slug)}">
     <meta property="og:image" content="${baseUrl}/assets/images/arabe.webp">
     <meta name="twitter:card" content="summary_large_image">
-    ${headLinks()}
+    ${headLinks('<link rel="preload" as="image" href="assets/images/hero-2.webp" fetchpriority="high">')}
     <script type="application/ld+json">
       ${articleStructuredData(article)}
     </script>
@@ -949,7 +952,9 @@ for (const file of readdirSync(".").filter((file) => file.endsWith(".html") && !
   }
   html = html.replaceAll("assets/css/style.css?v=performance-pass", `assets/css/style.css?v=${cssVersion}`);
   html = html.replaceAll("assets/css/style.css?v=blog-seo", `assets/css/style.css?v=${cssVersion}`);
+  html = html.replaceAll("assets/css/style.css?v=performance-cls", `assets/css/style.css?v=${cssVersion}`);
   html = html.replaceAll("assets/js/main.js?v=performance-pass", `assets/js/main.js?v=${jsVersion}`);
+  html = html.replaceAll("assets/js/main.js?v=blog-seo", `assets/js/main.js?v=${jsVersion}`);
   writeFileSync(file, html);
 }
 

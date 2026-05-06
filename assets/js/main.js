@@ -458,6 +458,8 @@ const detailPageTranslations = {
 };
 Object.assign(builtInTranslations.en.strings, detailPageTranslations);
 let translationCatalog = builtInTranslations;
+let translationCatalogPromise = null;
+let hasCapturedTranslationSource = false;
 const supportedLanguages = ["fr", "en"];
 const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
 let currentLanguage = supportedLanguages.includes(requestedLanguage)
@@ -523,6 +525,12 @@ const applyTranslations = (language = currentLanguage) => {
     button.setAttribute("aria-pressed", String(active));
   });
 
+  if (currentLanguage === "fr" && !hasCapturedTranslationSource) {
+    updatePriceSummary();
+    updateThemeToggleLabel();
+    return;
+  }
+
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
       const parent = node.parentElement;
@@ -570,6 +578,7 @@ const applyTranslations = (language = currentLanguage) => {
     input.value = translateText(input.__bayanFrValue, currentLanguage);
   });
 
+  hasCapturedTranslationSource = true;
   updatePriceSummary();
   updateThemeToggleLabel();
 };
@@ -606,7 +615,7 @@ const injectLanguageSwitcher = () => {
       button.dataset.languageChoice = language;
       button.textContent = language.toUpperCase();
       button.setAttribute("aria-pressed", "false");
-      button.addEventListener("click", () => applyTranslations(language));
+      button.addEventListener("click", () => setLanguage(language));
       switcher.append(button);
     });
     actions.insertBefore(switcher, menuToggle || actions.firstChild);
@@ -614,25 +623,47 @@ const injectLanguageSwitcher = () => {
 };
 
 const loadTranslationCatalog = async () => {
-  try {
-    const response = await fetch("translations.json", { cache: "no-cache" });
-    if (!response.ok) {
-      return;
-    }
-    translationCatalog = await response.json();
-    applyTranslations(currentLanguage);
-  } catch (error) {
-    translationCatalog = builtInTranslations;
+  if (translationCatalogPromise) {
+    return translationCatalogPromise;
   }
+  translationCatalogPromise = (async () => {
+    try {
+      const response = await fetch("translations.json");
+      if (!response.ok) {
+        return false;
+      }
+      translationCatalog = await response.json();
+      return true;
+    } catch (error) {
+      translationCatalog = builtInTranslations;
+      return false;
+    }
+  })();
+  return translationCatalogPromise;
+};
+
+const setLanguage = async (language = currentLanguage) => {
+  if (language === "en") {
+    await loadTranslationCatalog();
+  }
+  applyTranslations(language);
 };
 
 const scheduleTranslationCatalogLoad = () => {
+  if (currentLanguage !== "en") {
+    return;
+  }
+
   const loadWhenIdle = () => {
     if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(loadTranslationCatalog, { timeout: 3500 });
+      window.requestIdleCallback(() => {
+        loadTranslationCatalog().then(() => applyTranslations(currentLanguage));
+      }, { timeout: 3500 });
       return;
     }
-    setTimeout(loadTranslationCatalog, 1500);
+    setTimeout(() => {
+      loadTranslationCatalog().then(() => applyTranslations(currentLanguage));
+    }, 1500);
   };
 
   if (document.readyState === "complete") {

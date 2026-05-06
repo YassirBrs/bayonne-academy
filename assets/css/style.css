@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   /* Bayan Academy palette extracted from the logo. */
   --brand-gold: #c5a059;
   --brand-charcoal: #1a1a1a;
@@ -47,6 +48,7 @@
 }
 
 html[data-theme="light"] {
+  color-scheme: light;
   --page-bg: #f7f2e8;
   --surface: #fffdf8;
   --surface-elevated: #fff7e8;
@@ -370,6 +372,8 @@ html[data-theme="light"] .theme-toggle .theme-icon-moon {
   background-size: cover;
   transform: scale(1.04);
   transition: opacity 900ms ease;
+  will-change: opacity;
+  contain: paint;
 }
 
 .hero::before,
@@ -561,6 +565,12 @@ h1 {
 
 .section {
   padding: 92px 0;
+}
+
+.section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 
 .section.compact {
