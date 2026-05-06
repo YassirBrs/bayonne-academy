@@ -1,3 +1,14 @@
+const themeStorageKey = "bayanTheme";
+const getInitialTheme = () => {
+  try {
+    return localStorage.getItem(themeStorageKey) === "light" ? "light" : "dark";
+  } catch (error) {
+    return "dark";
+  }
+};
+let currentTheme = getInitialTheme();
+document.documentElement.dataset.theme = currentTheme;
+
 const heroImages = [
   "assets/images/hero-1.webp",
   "assets/images/hero-2.webp",
@@ -49,6 +60,8 @@ const builtInTranslations = {
       "Mon compte": "My account",
       "Politique de confidentialité": "Privacy policy",
       "Conditions générales": "Terms and conditions",
+      "Activer le thème clair": "Enable light theme",
+      "Activer le thème sombre": "Enable dark theme",
       "Liens utiles": "Useful links",
       "Masterclasses d’arabe": "Arabic masterclasses",
       "Programme enfants": "Children's programme",
@@ -464,6 +477,34 @@ const translateText = (text, language = currentLanguage) => {
   return getTranslationMap()[normalizeText(text)] || text;
 };
 
+const updateThemeToggleLabel = () => {
+  const button = document.querySelector("[data-theme-toggle]");
+  if (!button) {
+    return;
+  }
+  const label = currentTheme === "dark" ? "Activer le thème clair" : "Activer le thème sombre";
+  const translatedLabel = translateText(label, currentLanguage);
+  button.setAttribute("aria-label", translatedLabel);
+  button.setAttribute("title", translatedLabel);
+  button.setAttribute("aria-pressed", String(currentTheme === "light"));
+};
+
+const applyTheme = (theme, persist = true) => {
+  currentTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = currentTheme;
+  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+    meta.setAttribute("content", currentTheme === "light" ? "#f7f2e8" : "#1a1a1a");
+  });
+  if (persist) {
+    try {
+      localStorage.setItem(themeStorageKey, currentTheme);
+    } catch (error) {
+      // Theme persistence is optional; the visual switch still works.
+    }
+  }
+  updateThemeToggleLabel();
+};
+
 const setTextNodeContent = (node, value) => {
   const leading = node.textContent.match(/^\s*/)?.[0] || "";
   const trailing = node.textContent.match(/\s*$/)?.[0] || "";
@@ -530,6 +571,25 @@ const applyTranslations = (language = currentLanguage) => {
   });
 
   updatePriceSummary();
+  updateThemeToggleLabel();
+};
+
+const injectThemeSwitcher = () => {
+  document.querySelectorAll(".nav-actions").forEach((actions) => {
+    if (actions.querySelector("[data-theme-toggle]")) {
+      return;
+    }
+    const button = document.createElement("button");
+    button.className = "theme-toggle";
+    button.type = "button";
+    button.dataset.themeToggle = "true";
+    button.innerHTML = `<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.5A5.5 5.5 0 1 1 12 6a5.5 5.5 0 0 1 0 11.5Zm0-1.8A3.7 3.7 0 1 0 12 8a3.7 3.7 0 0 0 0 7.7ZM12 4.3c-.5 0-.9-.4-.9-.9V1.9c0-.5.4-.9.9-.9s.9.4.9.9v1.5c0 .5-.4.9-.9.9Zm0 18.7c-.5 0-.9-.4-.9-.9v-1.5c0-.5.4-.9.9-.9s.9.4.9.9v1.5c0 .5-.4.9-.9.9ZM4.1 5.4 3 4.3c-.4-.4-.4-.9 0-1.3.4-.4.9-.4 1.3 0l1.1 1.1c.4.4.4.9 0 1.3-.4.4-.9.4-1.3 0Zm15.6 15.6-1.1-1.1c-.4-.4-.4-.9 0-1.3.4-.4.9-.4 1.3 0l1.1 1.1c.4.4.4.9 0 1.3-.4.4-.9.4-1.3 0ZM3.4 12.9H1.9c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h1.5c.5 0 .9.4.9.9s-.4.9-.9.9Zm18.7 0h-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h1.5c.5 0 .9.4.9.9s-.4.9-.9.9ZM3 21c-.4-.4-.4-.9 0-1.3l1.1-1.1c.4-.4.9-.4 1.3 0 .4.4.4.9 0 1.3L4.3 21c-.4.4-.9.4-1.3 0Zm15.6-15.6c-.4-.4-.4-.9 0-1.3L19.7 3c.4-.4.9-.4 1.3 0 .4.4.4.9 0 1.3l-1.1 1.1c-.4.4-.9.4-1.3 0Z"/></svg><svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.7c.5.2.7.8.4 1.3A9.6 9.6 0 0 1 3.2 9.9 9.6 9.6 0 0 1 10.7 2c.5-.1 1 .2 1.1.7.1.4-.1.8-.4 1.1a7 7 0 0 0 8.4 10.5c.3-.3.7-.3 1.1-.1Zm-2.7 1a8.8 8.8 0 0 1-8.3-11 7.8 7.8 0 1 0 8.3 11Z"/></svg>`;
+    button.addEventListener("click", () => {
+      applyTheme(currentTheme === "light" ? "dark" : "light");
+    });
+    actions.insertBefore(button, menuToggle || actions.firstChild);
+  });
+  updateThemeToggleLabel();
 };
 
 const injectLanguageSwitcher = () => {
@@ -781,6 +841,8 @@ if (registrationForm) {
   });
 }
 
+injectThemeSwitcher();
 injectLanguageSwitcher();
+applyTheme(currentTheme, false);
 applyTranslations(currentLanguage);
 scheduleTranslationCatalogLoad();
