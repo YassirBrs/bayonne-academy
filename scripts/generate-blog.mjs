@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 
-const cssVersion = "blog-seo";
+const cssVersion = "performance-cls";
 const jsVersion = "blog-seo";
 const baseUrl = "https://yassirbrs.github.io/bayonne-academy";
 
@@ -598,8 +598,7 @@ const href = (slug) => `${slug}.html`;
 const legacyHref = (slug) => `blog-${slug}.html`;
 
 const headLinks = (extra = "") => `${extra}
-    <link rel="preload" href="assets/css/style.css?v=${cssVersion}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css?v=${cssVersion}"></noscript>`;
+    <link rel="stylesheet" href="assets/css/style.css?v=${cssVersion}">`;
 
 const header = (current = "blog") => `<a class="skip-link" href="#main-content">Aller au contenu</a>
     <header class="site-header" aria-label="Navigation principale">
@@ -949,6 +948,7 @@ for (const file of readdirSync(".").filter((file) => file.endsWith(".html") && !
     html = html.replace(/(<li><a href="index\.html">Accueil<\/a><\/li>)/g, `$1<li><a href="blog.html">Blog</a></li>`);
   }
   html = html.replaceAll("assets/css/style.css?v=performance-pass", `assets/css/style.css?v=${cssVersion}`);
+  html = html.replaceAll("assets/css/style.css?v=blog-seo", `assets/css/style.css?v=${cssVersion}`);
   html = html.replaceAll("assets/js/main.js?v=performance-pass", `assets/js/main.js?v=${jsVersion}`);
   writeFileSync(file, html);
 }

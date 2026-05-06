@@ -234,6 +234,8 @@ h3 {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 236px;
+  justify-content: flex-end;
 }
 
 .language-switcher {
@@ -2087,6 +2089,10 @@ html[lang="en"] [data-lang-panel="fr"] {
     display: none;
   }
 
+  .nav-actions {
+    min-width: 166px;
+  }
+
   .menu-toggle {
     display: inline-grid;
   }
@@ -2166,10 +2172,6 @@ html[lang="en"] [data-lang-panel="fr"] {
     --container: min(100% - 24px, 100%);
   }
 
-  .brand span {
-    max-width: 124px;
-  }
-
   .language-switcher {
     min-height: 34px;
     padding: 3px;
@@ -2179,6 +2181,15 @@ html[lang="en"] [data-lang-panel="fr"] {
     min-width: 32px;
     min-height: 26px;
     font-size: 11px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+    min-width: 166px;
+  }
+
+  .brand span {
+    max-width: 108px;
   }
 
   .hero {
@@ -2257,6 +2268,12 @@ html[lang="en"] [data-lang-panel="fr"] {
   .footer-bottom nav {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand span {
+    display: none;
   }
 }
 
