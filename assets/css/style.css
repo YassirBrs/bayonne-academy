@@ -1389,6 +1389,53 @@ html[lang="en"] [data-lang-panel="fr"] {
   font-size: 14px;
 }
 
+.conversion-pricing {
+  scroll-margin-top: 110px;
+}
+
+.conversion-pricing .section-lead {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-steps {
+  width: min(860px, 100%);
+  margin: 26px auto 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.order-steps article {
+  min-height: 74px;
+  padding: 16px;
+  border: 1px solid rgba(197, 160, 89, 0.24);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: color-mix(in srgb, var(--surface) 76%, transparent);
+}
+
+.order-steps strong {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: var(--brand-gold);
+  color: var(--brand-charcoal);
+  font-size: 15px;
+}
+
+.order-steps span {
+  color: var(--text);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
 .level-grid,
 .module-grid,
 .session-grid {
@@ -1716,6 +1763,18 @@ html[lang="en"] [data-lang-panel="fr"] {
   color: var(--text-subtle);
   font-size: 12px;
   text-align: center;
+}
+
+.reservation-note {
+  max-width: 760px;
+  margin: 28px auto 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(197, 160, 89, 0.26);
+  border-radius: var(--radius);
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 700;
 }
 
 .timeline {
@@ -2067,8 +2126,14 @@ html[lang="en"] [data-lang-panel="fr"] {
   border: 1px solid rgba(197, 160, 89, 0.28);
   border-radius: var(--radius);
   background: rgba(197, 160, 89, 0.08);
-  color: var(--text-muted);
+  color: var(--text);
   font-size: 14px;
+  font-weight: 700;
+}
+
+.optional-field {
+  color: var(--text-subtle);
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -2330,6 +2395,11 @@ html[lang="en"] [data-lang-panel="fr"] {
 
   .conversion-band {
     grid-template-columns: 1fr;
+  }
+
+  .order-steps {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
   }
 
   .price-grid {

@@ -525,7 +525,27 @@ const detailPageTranslations = {
   "Format oral uniquement": "Oral-only format",
   "Pour objectif global": "For a global goal",
   "Diagnostic oral rapide": "Quick oral diagnosis",
-  "Blocages prioritaires identifiés": "Priority blockers identified"
+  "Blocages prioritaires identifiés": "Priority blockers identified",
+  "Choisir un plan": "Choose a plan",
+  "Choix du plan": "Plan selection",
+  "Choisissez votre plan et finalisez sur WhatsApp": "Choose your plan and finalize on WhatsApp",
+  "Choisissez le plan de votre enfant": "Choose your child's plan",
+  "Choisissez votre plan de communication": "Choose your communication plan",
+  "Cliquez sur le plan adapté. Le formulaire reprend le tarif, vos informations et ouvre WhatsApp avec un message prêt à envoyer.": "Click the right plan. The form includes the price, your details and opens WhatsApp with a ready-to-send message.",
+  "Sélectionnez le format, ajoutez les informations parent/enfant, puis envoyez la demande préparée sur WhatsApp.": "Select the format, add parent/child details, then send the prepared request on WhatsApp.",
+  "Choisissez le parcours oral, ajoutez vos préférences, puis finalisez directement avec l’équipe sur WhatsApp.": "Choose the oral path, add your preferences, then finalize directly with the team on WhatsApp.",
+  "Étapes de réservation": "Reservation steps",
+  "Ajoutez vos infos": "Add your details",
+  "Envoyez sur WhatsApp": "Send on WhatsApp",
+  "Aucun paiement sur le site. Le plan, le créneau et le format sont confirmés sur WhatsApp avant le démarrage.": "No payment on the website. The plan, time slot and format are confirmed on WhatsApp before starting.",
+  "Finaliser sur WhatsApp": "Finalize on WhatsApp",
+  "Votre plan est sélectionné. Ajoutez vos informations, puis envoyez le message préparé à l’équipe.": "Your plan is selected. Add your details, then send the prepared message to the team.",
+  "Envoyer ma demande sur WhatsApp": "Send my request on WhatsApp",
+  "Plan sélectionné": "Selected plan",
+  "Plan choisi": "Selected plan",
+  "Comparer les plans": "Compare plans",
+  "Plan": "Plan",
+  "optionnel": "optional"
 };
 Object.assign(builtInTranslations.en.strings, detailPageTranslations);
 let translationCatalog = builtInTranslations;
@@ -864,7 +884,7 @@ const updatePriceSummary = () => {
   const packageSelect = registrationModal.querySelector("[data-price-select]");
   const summary = registrationModal.querySelector("[data-price-summary]");
   if (packageSelect && summary) {
-    summary.textContent = `${translateText("Tarif choisi", currentLanguage)}: ${packageSelect.value}`;
+    summary.textContent = `${translateText("Plan sélectionné", currentLanguage)}: ${packageSelect.value}`;
   }
 };
 
@@ -903,7 +923,7 @@ const openRegistrationModal = (trigger) => {
   document.body.classList.add("menu-open");
   applyTranslations(currentLanguage);
   updatePriceSummary();
-  const firstField = registrationModal.querySelector("select, input:not([readonly]), textarea, button");
+  const firstField = registrationModal.querySelector('input[name="name"], input[name="contact"], select, input:not([readonly]), textarea, button');
   if (firstField) {
     firstField.focus();
   }
