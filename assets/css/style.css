@@ -12,6 +12,11 @@
   --text-subtle: rgba(246, 234, 210, 0.58);
   --gold-soft: #efd28d;
   --gold-deep: #9a7b42;
+  --accent-text: #efd28d;
+  --accent-chip-bg: #2a271f;
+  --button-bg: #c5a059;
+  --button-bg-hover: #efd28d;
+  --button-text: #11100e;
   --ink: var(--text);
   --clay: var(--brand-charcoal);
   --cedar: var(--surface);
@@ -58,6 +63,11 @@ html[data-theme="light"] {
   --text-subtle: rgba(33, 29, 24, 0.56);
   --gold-soft: #7b5d24;
   --gold-deep: #6f5421;
+  --accent-text: #5f4618;
+  --accent-chip-bg: #fff4df;
+  --button-bg: #c5a059;
+  --button-bg-hover: #efd28d;
+  --button-text: #11100e;
   --ink: var(--text);
   --clay: #f7f2e8;
   --cedar: var(--surface);
@@ -420,9 +430,9 @@ html[data-theme="light"] .theme-toggle .theme-icon-moon {
   margin-bottom: 22px;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(197, 160, 89, 0.28);
-  background: rgba(197, 160, 89, 0.12);
-  color: var(--mist);
+  border: 1px solid rgba(197, 160, 89, 0.42);
+  background: var(--accent-chip-bg);
+  color: var(--accent-text);
   font-size: 13px;
   font-weight: 700;
 }
@@ -488,8 +498,8 @@ h1 {
 }
 
 .button {
-  background: var(--taupe);
-  color: var(--brand-charcoal);
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .button-secondary {
@@ -506,8 +516,8 @@ h1 {
 .button:hover,
 .button-secondary:hover {
   transform: translateY(-2px);
-  background: var(--gold-soft);
-  color: var(--brand-charcoal);
+  background: var(--button-bg-hover);
+  color: var(--button-text);
 }
 
 .button::after,
