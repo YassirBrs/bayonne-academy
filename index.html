@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://yassirbrs.github.io/bayonne-academy/assets/images/arabe.webp">
     <link rel="preload" as="image" href="assets/images/hero-1.webp" fetchpriority="high">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem("bayanTheme")==="light"?"light":"dark"}catch(error){document.documentElement.dataset.theme="dark"}</script>
-    <link rel="stylesheet" href="assets/css/style.css?v=performance-more">
+    <link rel="stylesheet" href="assets/css/style.css?v=hero-motion">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,14 +75,24 @@
     </header>
 
     <main id="main-content">
-      <section class="hero" id="accueil">
+      <section class="hero hero-geometric" id="accueil">
         <div class="hero-bg" id="heroBg" style="background-image: url('assets/images/hero-1.webp');"></div>
+        <div class="hero-luminance" aria-hidden="true"></div>
+        <div class="hero-geometry" aria-hidden="true">
+          <span class="hero-shape hero-shape-one"></span>
+          <span class="hero-shape hero-shape-two"></span>
+          <span class="hero-shape hero-shape-three"></span>
+          <span class="hero-shape hero-shape-four"></span>
+          <span class="hero-shape hero-shape-five"></span>
+          <span class="hero-ring hero-ring-one"></span>
+          <span class="hero-ring hero-ring-two"></span>
+        </div>
         <div class="hero-content">
-          <div class="hero-kicker">Les inscriptions sont ouvertes</div>
-          <h1>Bayan Academy</h1>
-          <p class="hero-subtitle">Apprendre l’arabe, renforcer la lecture et communiquer avec confiance</p>
-          <p class="hero-open">Masterclasses pour adultes et programme dédié aux enfants</p>
-          <div class="hero-actions">
+          <div class="hero-kicker hero-reveal hero-reveal-one">Les inscriptions sont ouvertes</div>
+          <h1 class="hero-title hero-reveal hero-reveal-two"><span>Bayan</span><span>Academy</span></h1>
+          <p class="hero-subtitle hero-reveal hero-reveal-three">Apprendre l’arabe, renforcer la lecture et communiquer avec confiance</p>
+          <p class="hero-open hero-reveal hero-reveal-four">Masterclasses pour adultes et programme dédié aux enfants</p>
+          <div class="hero-actions hero-reveal hero-reveal-five">
             <a class="button" href="nos-formations.html">Voir les programmes</a>
             <a class="button-secondary" href="#test-niveau">Faire le test de niveau</a>
           </div>
