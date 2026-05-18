@@ -174,11 +174,27 @@ const builtInTranslations = {
       "Tarif": "Price",
       "Adultes et adolescents": "Adults and teenagers",
       "Individualisé ou en groupe": "Individualized or group-based",
-      "Sessions de 1h à 2h": "1 to 2 hour sessions",
-      "Dès 38.50 €/mois ou 385 € en paiement complet": "From €38.50/month or €385 paid in full",
-      "Dès 38.50 €/mois": "From €38.50/month",
-      "Dès 41.50 €/mois": "From €41.50/month",
-      "Start With Us": "Start with us",
+  "Sessions de 1h à 2h": "1 to 2 hour sessions",
+  "Dès 38.50 €/mois ou 385 € en paiement complet": "From €38.50/month or €385 paid in full",
+  "Dès 38.50 €/mois": "From €38.50/month",
+  "Dès 41.50 €/mois": "From €41.50/month",
+  "Dès 38.50 €": "From €38.50",
+  "Dès 41.50 €": "From €41.50",
+  "Adultes": "Adults",
+  "Parents": "Parents",
+  "Très apprécié": "Highly rated",
+  "Recommandé": "Recommended",
+  "Adultes et adolescents · 1h à 2h": "Adults and teenagers · 1h to 2h",
+  "Enfants · 1h à 2h": "Children · 1h to 2h",
+  "Lecture, compréhension et communication avec un parcours structuré selon votre niveau.": "Reading, comprehension and communication with a structured path based on your level.",
+  "Un cadre progressif pour apprendre les lettres, lire, comprendre et parler sans pression.": "A progressive setting to learn letters, read, understand and speak without pressure.",
+  "Voir le programme": "View programme",
+  "Voir l’image": "View image",
+  "Image précédente": "Previous image",
+  "Image suivante": "Next image",
+  "Images du programme": "Programme images",
+  "Note 4.9 sur 5": "Rating 4.9 out of 5",
+  "Start With Us": "Start with us",
       "Lecture": "Reading",
       "Fluidité, prononciation, rythme et compréhension des structures de base.": "Fluency, pronunciation, rhythm and comprehension of basic structures.",
       "Compréhension": "Comprehension",
@@ -860,6 +876,64 @@ document.querySelectorAll("[data-card-link]").forEach((card) => {
     event.preventDefault();
     openCardLink();
   });
+});
+
+document.querySelectorAll("[data-card-carousel]").forEach((card) => {
+  const image = card.querySelector("[data-card-carousel-image]");
+  const previous = card.querySelector("[data-card-prev]");
+  const next = card.querySelector("[data-card-next]");
+  const dots = card.querySelector("[data-card-dots]");
+  const images = (card.dataset.cardImages || "").split("|").filter(Boolean);
+  const alts = (card.dataset.cardAlts || "").split("|");
+  let currentIndex = 0;
+
+  if (!image || images.length < 2) {
+    return;
+  }
+
+  const renderDots = () => {
+    if (!dots) {
+      return;
+    }
+    dots.innerHTML = "";
+    images.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = index === currentIndex ? "is-active" : "";
+      dot.setAttribute("aria-label", `${translateText("Voir l’image", currentLanguage)} ${index + 1}`);
+      dot.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        showImage(index);
+      });
+      dots.append(dot);
+    });
+  };
+
+  const showImage = (index) => {
+    currentIndex = (index + images.length) % images.length;
+    image.style.opacity = "0";
+    window.setTimeout(() => {
+      image.src = images[currentIndex];
+      image.alt = alts[currentIndex] || image.alt;
+      image.style.opacity = "1";
+      renderDots();
+    }, 120);
+  };
+
+  previous?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  next?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  renderDots();
 });
 
 document.querySelectorAll("[data-contact-form]").forEach((form) => {
