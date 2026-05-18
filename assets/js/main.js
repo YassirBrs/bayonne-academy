@@ -1053,10 +1053,77 @@ if (registrationForm) {
     updatePriceSummary();
   }
 
+  const getRegistrationValue = (data, key) => String(data.get(key) || "").trim() || "-";
+  const buildRegistrationMessage = (data) => {
+    const programme = getRegistrationValue(data, "programme");
+    const packageName = getRegistrationValue(data, "package");
+    const sessions = getRegistrationValue(data, "sessions");
+    const duration = getRegistrationValue(data, "duration");
+    const format = getRegistrationValue(data, "format");
+    const name = getRegistrationValue(data, "name");
+    const contact = getRegistrationValue(data, "contact");
+    const level = getRegistrationValue(data, "level");
+    const details = getRegistrationValue(data, "details");
+
+    if (currentLanguage === "en") {
+      return `✅ *New Registration Request!*
+
+Hi Bayan Academy, I would like to reserve a place.
+
+📦 *Request:* Programme registration
+🌟 *Programme:* ${programme}
+💰 *Plan / Price:* ${packageName}
+💳 *Payment:* To be confirmed with the team
+
+🗓️ *Preferred Pace:*
+• Sessions: ${sessions}
+• Duration: ${duration}
+• Format: ${format}
+
+👤 *Client Details:*
+• Name: ${name}
+• Contact: ${contact}
+• Level: ${level}
+
+📝 *Notes:*
+${details}
+
+Please confirm availability and the next step.
+
+*Bayan Academy*`;
+    }
+
+    return `✅ *Nouvelle demande d'inscription !*
+
+Salam Bayan Academy, je souhaite réserver une place.
+
+📦 *Demande:* Inscription programme
+🌟 *Programme:* ${programme}
+💰 *Plan / tarif:* ${packageName}
+💳 *Paiement:* À confirmer avec l'équipe
+
+🗓️ *Rythme souhaité:*
+• Sessions: ${sessions}
+• Durée: ${duration}
+• Format: ${format}
+
+👤 *Informations client:*
+• Nom: ${name}
+• Contact: ${contact}
+• Niveau: ${level}
+
+📝 *Détails:*
+${details}
+
+Merci de confirmer la disponibilité et la prochaine étape.
+
+*Bayan Academy*`;
+  };
+
   registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(registrationForm);
-    const message = encodeURIComponent(`${translateText("Salam, je souhaite réserver une place chez Bayan Academy.", currentLanguage)}\n${translateText("Programme", currentLanguage)}: ${data.get("programme") || ""}\n${translateText("Tarif choisi", currentLanguage)}: ${data.get("package") || ""}\n${translateText("Sessions par semaine", currentLanguage)}: ${data.get("sessions") || ""}\n${translateText("Durée", currentLanguage)}: ${data.get("duration") || ""}\n${translateText("Format", currentLanguage)}: ${data.get("format") || ""}\n${translateText("Nom", currentLanguage)}: ${data.get("name") || ""}\n${translateText("Contact", currentLanguage)}: ${data.get("contact") || ""}\n${translateText("Niveau / âge", currentLanguage)}: ${data.get("level") || ""}\n${translateText("Détails utiles", currentLanguage)}: ${data.get("details") || ""}`);
+    const message = encodeURIComponent(buildRegistrationMessage(data));
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank", "noopener");
   });
 }
