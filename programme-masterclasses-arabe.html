@@ -284,7 +284,17 @@
             <label>Nom complet<input type="text" name="name" autocomplete="name" required></label>
             <label>Contact<input type="text" name="contact" placeholder="Email ou WhatsApp" required></label>
           </div>
-          <label>Niveau actuel<input type="text" name="level" placeholder="Débutant, intermédiaire, avancé"></label>
+          <label>Niveau actuel
+            <select name="level" required>
+              <option value="">Choisir un niveau</option>
+              <option>Débutant complet</option>
+              <option>Je connais les lettres</option>
+              <option>Je lis lentement</option>
+              <option>Intermédiaire</option>
+              <option>Avancé</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </label>
           <label>Détails utiles <span class="optional-field">optionnel</span><textarea name="details" placeholder="Objectifs, disponibilités, attentes particulières"></textarea></label>
           <div class="modal-actions">
             <button class="button" type="submit">Envoyer ma demande sur WhatsApp</button>

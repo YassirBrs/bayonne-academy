@@ -284,7 +284,17 @@
             <label>Nom du parent<input type="text" name="name" autocomplete="name" required></label>
             <label>Contact<input type="text" name="contact" placeholder="Email ou WhatsApp" required></label>
           </div>
-          <label>Âge et niveau de l’enfant<input type="text" name="level" placeholder="Ex: 8 ans, débutant"></label>
+          <label>Niveau de l’enfant
+            <select name="level" required>
+              <option value="">Choisir un niveau</option>
+              <option>Débutant complet</option>
+              <option>Reconnaît quelques lettres</option>
+              <option>Lit des syllabes</option>
+              <option>Lit des mots simples</option>
+              <option>Lit déjà des phrases</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </label>
           <label>Détails utiles <span class="optional-field">optionnel</span><textarea name="details" placeholder="Objectifs, disponibilités, informations sur l’enfant"></textarea></label>
           <div class="modal-actions">
             <button class="button" type="submit">Envoyer ma demande sur WhatsApp</button>
