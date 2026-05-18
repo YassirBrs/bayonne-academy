@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" as="image" href="assets/images/hero-4.webp" fetchpriority="high">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem("bayanTheme")==="light"?"light":"dark"}catch(error){document.documentElement.dataset.theme="dark"}</script>
-    <link rel="stylesheet" href="assets/css/style.css?v=performance-more">
+    <link rel="stylesheet" href="assets/css/style.css?v=programme-product">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -33,114 +33,84 @@
     </header>
 
     <main id="main-content">
-      <section class="page-hero about">
-        <div class="page-hero-content">
-          <span class="eyebrow">Programme enfants</span>
-          <h1>Apprendre l’arabe dès l’enfance</h1>
-          <p>Un programme progressif pour lire, comprendre, retenir du vocabulaire et oser s’exprimer.</p>
-          <div class="hero-actions">
-            <a class="button" href="#tarifs">Choisir un plan</a>
-            <a class="button-secondary" href="#tarifs">Comparer les plans</a>
-          </div>
+      <section class="programme-cover programme-cover-kids">
+        <div class="programme-cover-inner">
+          <nav class="breadcrumb" aria-label="Fil d’Ariane">
+            <a href="index.html">Accueil</a>
+            <span>Nos programmes</span>
+            <strong>Programme arabe enfants</strong>
+          </nav>
         </div>
       </section>
 
-      <section class="section alt conversion-pricing" id="tarifs">
+      <section class="section programme-product-section" id="tarifs">
+        <div class="section-inner programme-product" data-programme-order>
+          <div class="programme-gallery" data-programme-gallery>
+            <img class="programme-main-image" src="assets/images/hero-3.webp" alt="Programme d’arabe pour enfants" width="768" height="713" fetchpriority="high" data-gallery-main>
+            <div class="programme-thumbs" aria-label="Images du programme">
+              <button class="is-active" type="button" data-gallery-thumb data-src="assets/images/hero-3.webp" data-alt="Programme d’arabe pour enfants"><img src="assets/images/hero-3-480.webp" alt="" width="480" height="446"></button>
+              <button type="button" data-gallery-thumb data-src="assets/images/hero-1.webp" data-alt="Enfants en lecture guidée"><img src="assets/images/hero-1.webp" alt="" width="768" height="713"></button>
+              <button type="button" data-gallery-thumb data-src="assets/images/hero-6.webp" data-alt="Enfants lisant dans une salle lumineuse"><img src="assets/images/hero-6.webp" alt="" width="768" height="713"></button>
+            </div>
+          </div>
+          <aside class="programme-order-card" aria-label="Réserver Programme arabe enfants">
+            <div class="programme-meta">
+              <span><strong>#CODE</strong> BA-AR-KIDS</span>
+              <span><strong>CATÉGORIE</strong> Arabe enfants</span>
+              <span><strong>ÉTIQUETTE</strong> Parents et enfants</span>
+            </div>
+            <h1>Programme arabe enfants</h1>
+            <p class="programme-price-lead">De 10 € à 41.50 €/mois</p>
+            <p>Un programme progressif pour lire, comprendre, retenir du vocabulaire et oser s’exprimer en arabe.</p>
+            <label class="programme-select-label">Options de paiement
+              <select data-plan-select>
+                <option data-price="Dès 41.50 €/mois pendant 10 mois" data-package="Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois" data-description="Lecture, vocabulaire, compréhension et expression orale avec un rythme adapté à l’âge.">Parcours arabe enfants</option>
+                <option data-price="Dès 38.50 €/mois" data-package="Programme individualisé enfant - dès 38.50 €/mois" data-description="Suivi rapproché pour un enfant avec un objectif précis ou un besoin particulier.">Programme individualisé</option>
+                <option data-price="Dès 41.50 €/mois" data-package="Programme en groupe enfant - dès 41.50 €/mois" data-description="Groupe motivant avec des enfants de niveau proche.">Programme en groupe</option>
+                <option data-price="10 €" data-package="Masterclass Découverte famille - 10 €" data-description="Session courte pour évaluer l’enfant et orienter le bon programme.">Masterclass famille</option>
+              </select>
+            </label>
+            <p class="programme-plan-description" data-plan-description>Lecture, vocabulaire, compréhension et expression orale avec un rythme adapté à l’âge.</p>
+            <p class="programme-selected-price" data-plan-price>Dès 41.50 €/mois pendant 10 mois</p>
+            <div class="programme-alert">
+              <span aria-hidden="true">!</span>
+              <p>Veuillez remplir le formulaire pour cette formation et attendre la réponse de l’équipe.</p>
+              <button class="button" type="button" data-order-cta data-open-registration data-programme="Programme arabe enfants" data-package="Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois">Cliquez ici</button>
+            </div>
+            <div class="programme-trust">
+              <strong>Confirmation parent sur WhatsApp</strong>
+              <span>Âge, niveau et créneau validés avant le démarrage.</span>
+            </div>
+            <div class="programme-share">
+              <span>Partager cette formation</span>
+              <a href="nos-formations.html">Nos programmes</a>
+              <a href="contactez-nous.html">Contact</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section compact product-description">
         <div class="section-inner">
-          <div class="section-lead">
-            <span class="eyebrow">Choix du plan</span>
-            <h2>Choisissez le plan de votre enfant</h2>
-            <p>Sélectionnez le format, ajoutez les informations parent/enfant, puis envoyez la demande préparée sur WhatsApp.</p>
-          </div>
-          <div class="order-steps" aria-label="Étapes de réservation">
-            <article><strong>1</strong><span>Choisissez un plan</span></article>
-            <article><strong>2</strong><span>Ajoutez vos infos</span></article>
-            <article><strong>3</strong><span>Envoyez sur WhatsApp</span></article>
-          </div>
-          <div class="price-grid pricing-showcase">
-            <article class="price-card featured-price">
-              <div class="price-badge">Recommandé parents</div>
-              <div class="price-card-header">
-                <span class="price-label">Enfants</span>
-                <h3>Parcours arabe enfants</h3>
-                <div class="price-amount"><span>Dès 41.50 €</span><small>/mois</small></div>
-                <p class="price-note">Lecture, vocabulaire, compréhension et expression orale avec un rythme adapté à l’âge.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Évaluation de l’âge et du niveau</li>
-                  <li class="is-included">Lecture guidée et vocabulaire vivant</li>
-                  <li class="is-included">Retour parent après progression</li>
-                  <li class="is-included">Durée de 1h à 2h <span class="feature-info" title="Selon l’attention de l’enfant">i</span></li>
-                  <li class="is-muted">Rythme intensif obligatoire</li>
-                </ul>
-              </div>
-              <button class="button" type="button" data-open-registration data-programme="Programme arabe enfants" data-package="Parcours arabe enfants - dès 41.50 €/mois pendant 10 mois">Réserver ce parcours</button>
-              <p class="price-footer">Créneau confirmé sur WhatsApp</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Individuel</span>
-                <h3>Programme individualisé</h3>
-                <div class="price-amount"><span>Dès 38.50 €</span><small>/mois</small></div>
-                <p class="price-note">Pour accompagner un enfant avec un objectif précis ou un besoin de suivi rapproché.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Attention centrée sur l’enfant</li>
-                  <li class="is-included">Correction plus rapide</li>
-                  <li class="is-included">Objectifs familiaux intégrés</li>
-                  <li class="is-included">Planning plus flexible</li>
-                  <li class="is-muted">Dynamique de groupe</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Programme individualisé enfant" data-package="Programme individualisé enfant - dès 38.50 €/mois">Choisir l’individuel</button>
-              <p class="price-footer">Pour besoins spécifiques</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Groupe</span>
-                <h3>Groupe enfants</h3>
-                <div class="price-amount"><span>Dès 41.50 €</span><small>/mois</small></div>
-                <p class="price-note">Un cadre motivant pour progresser avec d’autres enfants de niveau proche.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Cadre collectif motivant</li>
-                  <li class="is-included">Niveaux proches regroupés</li>
-                  <li class="is-included">Expression orale en interaction</li>
-                  <li class="is-included">Rythme régulier</li>
-                  <li class="is-muted">Créneau totalement personnalisé</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Groupe arabe enfants" data-package="Programme en groupe enfant - dès 41.50 €/mois">Choisir le groupe</button>
-              <p class="price-footer">Sous réserve de place</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Découverte</span>
-                <h3>Masterclass famille</h3>
-                <div class="price-amount"><span>10 €</span><small>session</small></div>
-                <p class="price-note">Une session courte pour évaluer l’enfant et orienter le bon programme.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Diagnostic enfant</li>
-                  <li class="is-included">Conseil pour les parents</li>
-                  <li class="is-included">Choix individuel ou groupe</li>
-                  <li class="is-muted">Programme complet inclus</li>
-                  <li class="is-muted">Suivi hebdomadaire inclus</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclass découverte famille" data-package="Masterclass Découverte famille - 10 €">Démarrer</button>
-              <p class="price-footer">Idéal pour commencer</p>
-            </article>
-          </div>
-          <p class="reservation-note">Aucun paiement sur le site. Le plan, le créneau et le format sont confirmés sur WhatsApp avant le démarrage.</p>
+          <details open>
+            <summary>Description</summary>
+            <p>Ce programme aide les enfants à installer les bases de la lecture arabe, enrichir leur vocabulaire et prendre confiance à l’oral.</p>
+            <p><strong>Objectif :</strong> avancer pas à pas avec un cadre motivant et compréhensible pour les parents.</p>
+            <p><strong>Déroulement :</strong> 1h à 2h par séance, en individuel ou en groupe selon l’âge et l’attention.</p>
+          </details>
+          <details>
+            <summary>Informations complémentaires</summary>
+            <p>L’équipe vérifie l’âge, le niveau et les disponibilités familiales sur WhatsApp avant de confirmer la place.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="programme-popular" aria-label="Formations populaires">
+        <div class="section-inner popular-row">
+          <h2>Formations populaires</h2>
+          <a href="programme-arabe-enfants.html"><img src="assets/images/hero-3-480.webp" alt="" width="480" height="446">Programme enfants</a>
+          <a href="programme-masterclasses-arabe.html"><img src="assets/images/arabe-480.webp" alt="" width="480" height="446">Masterclasses d’arabe</a>
+          <a href="programme-communication-arabe.html"><img src="assets/images/hero-5-480.webp" alt="" width="480" height="480">Communication arabe</a>
         </div>
       </section>
 
@@ -332,6 +302,6 @@
       <div class="footer-bottom"><div class="footer-bottom-inner"><span>Copyright © Bayan Academy</span><nav aria-label="Mentions"><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="conditions-utilisation.html">Conditions générales</a></nav></div></div>
     </footer>
     <a class="whatsapp" href="#tarifs" aria-label="Choisir un plan">Plan</a>
-    <script src="assets/js/main.js?v=performance-more" defer></script>
+    <script src="assets/js/main.js?v=programme-product" defer></script>
   </body>
 </html>

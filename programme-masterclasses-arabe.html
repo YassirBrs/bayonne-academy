@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" as="image" href="assets/images/hero-2.webp" fetchpriority="high">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem("bayanTheme")==="light"?"light":"dark"}catch(error){document.documentElement.dataset.theme="dark"}</script>
-    <link rel="stylesheet" href="assets/css/style.css?v=performance-more">
+    <link rel="stylesheet" href="assets/css/style.css?v=programme-product">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -33,114 +33,84 @@
     </header>
 
     <main id="main-content">
-      <section class="page-hero formations">
-        <div class="page-hero-content">
-          <span class="eyebrow">Programme adultes et adolescents</span>
-          <h1>Masterclasses d’arabe</h1>
-          <p>Renforcer la lecture, comprendre avec méthode et communiquer en arabe avec plus d’aisance.</p>
-          <div class="hero-actions">
-            <a class="button" href="#tarifs">Choisir un plan</a>
-            <a class="button-secondary" href="#tarifs">Comparer les plans</a>
-          </div>
+      <section class="programme-cover programme-cover-master">
+        <div class="programme-cover-inner">
+          <nav class="breadcrumb" aria-label="Fil d’Ariane">
+            <a href="index.html">Accueil</a>
+            <span>Nos programmes</span>
+            <strong>Masterclasses d’arabe</strong>
+          </nav>
         </div>
       </section>
 
-      <section class="section alt conversion-pricing" id="tarifs">
+      <section class="section programme-product-section" id="tarifs">
+        <div class="section-inner programme-product" data-programme-order>
+          <div class="programme-gallery" data-programme-gallery>
+            <img class="programme-main-image" src="assets/images/arabe.webp" alt="Salle de cours pour apprendre l’arabe" width="768" height="713" fetchpriority="high" data-gallery-main>
+            <div class="programme-thumbs" aria-label="Images du programme">
+              <button class="is-active" type="button" data-gallery-thumb data-src="assets/images/arabe.webp" data-alt="Salle de cours pour apprendre l’arabe"><img src="assets/images/arabe-480.webp" alt="" width="480" height="446"></button>
+              <button type="button" data-gallery-thumb data-src="assets/images/hero-2.webp" data-alt="Livres d’étude en arabe"><img src="assets/images/hero-2.webp" alt="" width="768" height="713"></button>
+              <button type="button" data-gallery-thumb data-src="assets/images/hero-5.webp" data-alt="Tableau d’alphabet arabe"><img src="assets/images/hero-5-480.webp" alt="" width="480" height="480"></button>
+            </div>
+          </div>
+          <aside class="programme-order-card" aria-label="Réserver Masterclasses d’arabe">
+            <div class="programme-meta">
+              <span><strong>#CODE</strong> BA-AR-MASTER</span>
+              <span><strong>CATÉGORIE</strong> Langue arabe</span>
+              <span><strong>ÉTIQUETTE</strong> Adultes et adolescents</span>
+            </div>
+            <h1>Masterclasses d’arabe</h1>
+            <p class="programme-price-lead">De 38.50 € à 385 €</p>
+            <p>Renforcez la lecture, la compréhension et la communication avec un parcours clair, adapté au niveau réel.</p>
+            <label class="programme-select-label">Options de paiement
+              <select data-plan-select>
+                <option data-price="385 €" data-package="Parcours Langue Arabe complet - 385 €" data-description="Paiement complet pour un parcours structuré lecture, compréhension et communication.">Paiement complet</option>
+                <option data-price="38.50 €/mois pendant 10 mois" data-package="Paiement échelonné Langue Arabe - 38.50 €/mois pendant 10 mois" data-description="Paiement échelonné jusqu’à 10 mois, à confirmer avec l’équipe.">10 prélèvements</option>
+                <option data-price="Dès 38.50 €/mois" data-package="Communication arabe - dès 38.50 €/mois" data-description="Parcours orienté phrases utiles, vocabulaire actif et aisance orale.">Communication arabe</option>
+                <option data-price="10 €" data-package="Masterclass Découverte - 10 €" data-description="Session ciblée pour clarifier le niveau et choisir le bon programme.">Masterclass découverte</option>
+              </select>
+            </label>
+            <p class="programme-plan-description" data-plan-description>Paiement complet pour un parcours structuré lecture, compréhension et communication.</p>
+            <p class="programme-selected-price" data-plan-price>385 €</p>
+            <div class="programme-alert">
+              <span aria-hidden="true">!</span>
+              <p>Veuillez remplir le formulaire pour cette formation et attendre la réponse de l’équipe.</p>
+              <button class="button" type="button" data-order-cta data-open-registration data-programme="Masterclasses d’arabe" data-package="Parcours Langue Arabe complet - 385 €">Cliquez ici</button>
+            </div>
+            <div class="programme-trust">
+              <strong>Paiement confirmé sur WhatsApp</strong>
+              <span>Aucun paiement automatique sur le site.</span>
+            </div>
+            <div class="programme-share">
+              <span>Partager cette formation</span>
+              <a href="nos-formations.html">Nos programmes</a>
+              <a href="contactez-nous.html">Contact</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section compact product-description">
         <div class="section-inner">
-          <div class="section-lead">
-            <span class="eyebrow">Choix du plan</span>
-            <h2>Choisissez votre plan et finalisez sur WhatsApp</h2>
-            <p>Cliquez sur le plan adapté. Le formulaire reprend le tarif, vos informations et ouvre WhatsApp avec un message prêt à envoyer.</p>
-          </div>
-          <div class="order-steps" aria-label="Étapes de réservation">
-            <article><strong>1</strong><span>Choisissez un plan</span></article>
-            <article><strong>2</strong><span>Ajoutez vos infos</span></article>
-            <article><strong>3</strong><span>Envoyez sur WhatsApp</span></article>
-          </div>
-          <div class="price-grid pricing-showcase">
-            <article class="price-card featured-price">
-              <div class="price-badge">Meilleur choix</div>
-              <div class="price-card-header">
-                <span class="price-label">Parcours complet</span>
-                <h3>Langue arabe</h3>
-                <div class="price-amount"><span>385 €</span><small>paiement complet</small></div>
-                <p class="price-note">Un cadre structuré pour lecture, compréhension, expression orale et suivi de progression.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Évaluation du niveau avant démarrage</li>
-                  <li class="is-included">Lecture, compréhension et communication</li>
-                  <li class="is-included">Plan de progression clair</li>
-                  <li class="is-included">Choix individualisé ou groupe <span class="feature-info" title="Confirmé selon disponibilités">i</span></li>
-                  <li class="is-muted">Paiement mensuel séparé</li>
-                </ul>
-              </div>
-              <button class="button" type="button" data-open-registration data-programme="Masterclasses d’arabe" data-package="Parcours Langue Arabe complet - 385 €">Réserver ce tarif</button>
-              <p class="price-footer">Confirmation finale sur WhatsApp</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Échelonné</span>
-                <h3>Langue arabe mensuel</h3>
-                <div class="price-amount"><span>38.50 €</span><small>/mois</small></div>
-                <p class="price-note">Une option plus souple pour avancer avec le même cadre sur plusieurs mois.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Jusqu’à 10 mensualités</li>
-                  <li class="is-included">Même programme que le complet</li>
-                  <li class="is-included">Rythme adapté à vos disponibilités</li>
-                  <li class="is-included">Séances de 1h à 2h</li>
-                  <li class="is-muted">Remise paiement complet</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclasses d’arabe" data-package="Paiement échelonné Langue Arabe - 38.50 €/mois pendant 10 mois">Choisir ce rythme</button>
-              <p class="price-footer">Détails confirmés avec l’équipe</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Expression</span>
-                <h3>Communication arabe</h3>
-                <div class="price-amount"><span>Dès 38.50 €</span><small>/mois</small></div>
-                <p class="price-note">Pour renforcer les phrases utiles, le vocabulaire actif et l’aisance orale.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Expression orale guidée</li>
-                  <li class="is-included">Situations de la vie quotidienne</li>
-                  <li class="is-included">Correction de prononciation</li>
-                  <li class="is-included">Format individuel ou groupe</li>
-                  <li class="is-muted">Parcours lecture complet inclus</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Communication arabe" data-package="Communication arabe - dès 38.50 €/mois">Choisir ce parcours</button>
-              <p class="price-footer">Orientation selon votre objectif</p>
-            </article>
-            <article class="price-card">
-              <div class="price-card-header">
-                <span class="price-label">Découverte</span>
-                <h3>Masterclass ciblée</h3>
-                <div class="price-amount"><span>10 €</span><small>session</small></div>
-                <p class="price-note">Une première session pour clarifier le niveau et choisir le bon programme.</p>
-              </div>
-              <div class="price-feature-list">
-                <h4>Points forts du plan</h4>
-                <ul>
-                  <li class="is-included">Diagnostic rapide</li>
-                  <li class="is-included">Conseil de rythme</li>
-                  <li class="is-included">Recommandation de parcours</li>
-                  <li class="is-muted">Suivi long inclus</li>
-                  <li class="is-muted">Place garantie en groupe</li>
-                </ul>
-              </div>
-              <button class="button-secondary" type="button" data-open-registration data-programme="Masterclass découverte" data-package="Masterclass Découverte - 10 €">Démarrer</button>
-              <p class="price-footer">Idéal avant inscription</p>
-            </article>
-          </div>
-          <p class="reservation-note">Aucun paiement sur le site. Le plan, le créneau et le format sont confirmés sur WhatsApp avant le démarrage.</p>
+          <details open>
+            <summary>Description</summary>
+            <p>Ce programme aide les adultes et adolescents à lire avec plus de fluidité, comprendre les structures utiles et construire des réponses simples en arabe.</p>
+            <p><strong>Objectif :</strong> progresser avec un cadre clair en lecture, compréhension et communication.</p>
+            <p><strong>Déroulement :</strong> 1h à 2h par séance, en individuel ou en groupe selon votre objectif.</p>
+          </details>
+          <details>
+            <summary>Informations complémentaires</summary>
+            <p>Le niveau, les disponibilités et le format sont confirmés sur WhatsApp avant le démarrage.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="programme-popular" aria-label="Formations populaires">
+        <div class="section-inner popular-row">
+          <h2>Formations populaires</h2>
+          <a href="programme-masterclasses-arabe.html"><img src="assets/images/arabe-480.webp" alt="" width="480" height="446">Masterclasses d’arabe</a>
+          <a href="programme-communication-arabe.html"><img src="assets/images/hero-5-480.webp" alt="" width="480" height="480">Communication arabe</a>
+          <a href="programme-arabe-enfants.html"><img src="assets/images/hero-3-480.webp" alt="" width="480" height="446">Programme enfants</a>
         </div>
       </section>
 
@@ -332,6 +302,6 @@
       <div class="footer-bottom"><div class="footer-bottom-inner"><span>Copyright © Bayan Academy</span><nav aria-label="Mentions"><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="conditions-utilisation.html">Conditions générales</a></nav></div></div>
     </footer>
     <a class="whatsapp" href="#tarifs" aria-label="Choisir un plan">Plan</a>
-    <script src="assets/js/main.js?v=performance-more" defer></script>
+    <script src="assets/js/main.js?v=programme-product" defer></script>
   </body>
 </html>

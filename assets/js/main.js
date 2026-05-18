@@ -545,6 +545,41 @@ const detailPageTranslations = {
   "Plan choisi": "Selected plan",
   "Comparer les plans": "Compare plans",
   "Plan": "Plan",
+  "CATÉGORIE": "CATEGORY",
+  "ÉTIQUETTE": "TAG",
+  "Arabe enfants": "Children's Arabic",
+  "Parents et enfants": "Parents and children",
+  "Expression orale": "Oral expression",
+  "Individualisé ou groupe": "Individual or group",
+  "De 38.50 € à 385 €": "From €38.50 to €385",
+  "De 10 € à 41.50 €/mois": "From €10 to €41.50/month",
+  "Renforcez la lecture, la compréhension et la communication avec un parcours clair, adapté au niveau réel.": "Strengthen reading, comprehension and communication with a clear path adapted to the real level.",
+  "Un programme progressif pour lire, comprendre, retenir du vocabulaire et oser s’exprimer en arabe.": "A progressive programme to read, understand, retain vocabulary and dare to speak Arabic.",
+  "Construisez des phrases utiles, comprenez les échanges simples et gagnez en assurance à l’oral.": "Build useful sentences, understand simple exchanges and gain oral confidence.",
+  "Options de paiement": "Payment options",
+  "Paiement complet": "Full payment",
+  "10 prélèvements": "10 installments",
+  "Parcours oral": "Oral path",
+  "Langue arabe complet": "Full Arabic language",
+  "Évaluation orale": "Oral assessment",
+  "Parcours arabe enfants": "Children's Arabic path",
+  "Masterclass famille": "Family masterclass",
+  "Veuillez remplir le formulaire pour cette formation et attendre la réponse de l’équipe.": "Please fill in the form for this programme and wait for the team's reply.",
+  "Cliquez ici": "Click here",
+  "Paiement confirmé sur WhatsApp": "Payment confirmed on WhatsApp",
+  "Aucun paiement automatique sur le site.": "No automatic payment on the website.",
+  "Confirmation parent sur WhatsApp": "Parent confirmation on WhatsApp",
+  "Âge, niveau et créneau validés avant le démarrage.": "Age, level and time slot are validated before starting.",
+  "Le format et la durée sont confirmés avant le démarrage.": "The format and duration are confirmed before starting.",
+  "Partager cette formation": "Share this programme",
+  "Description": "Description",
+  "Informations complémentaires": "Additional information",
+  "Formations populaires": "Popular programmes",
+  "Ce programme aide les adultes et adolescents à lire avec plus de fluidité, comprendre les structures utiles et construire des réponses simples en arabe.": "This programme helps adults and teenagers read more fluently, understand useful structures and build simple answers in Arabic.",
+  "Ce programme aide les enfants à installer les bases de la lecture arabe, enrichir leur vocabulaire et prendre confiance à l’oral.": "This programme helps children build Arabic reading foundations, enrich their vocabulary and gain speaking confidence.",
+  "Ce parcours transforme le vocabulaire passif en phrases réutilisables. L’objectif est de comprendre, répondre et parler sans rester bloqué sur la théorie.": "This path turns passive vocabulary into reusable sentences. The goal is to understand, answer and speak without staying stuck in theory.",
+  "Objectif :": "Goal:",
+  "Déroulement :": "Format:",
   "optionnel": "optional"
 };
 Object.assign(builtInTranslations.en.strings, detailPageTranslations);
@@ -871,6 +906,57 @@ document.querySelectorAll("[data-level-test]").forEach((form) => {
       result.hidden = false;
     }
   });
+});
+
+document.querySelectorAll("[data-programme-gallery]").forEach((gallery) => {
+  const mainImage = gallery.querySelector("[data-gallery-main]");
+  const thumbs = Array.from(gallery.querySelectorAll("[data-gallery-thumb]"));
+
+  if (!mainImage || !thumbs.length) {
+    return;
+  }
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const nextSrc = thumb.dataset.src;
+      if (!nextSrc) {
+        return;
+      }
+      mainImage.src = nextSrc;
+      mainImage.alt = thumb.dataset.alt || mainImage.alt;
+      thumbs.forEach((item) => item.classList.toggle("is-active", item === thumb));
+    });
+  });
+});
+
+document.querySelectorAll("[data-programme-order]").forEach((order) => {
+  const select = order.querySelector("[data-plan-select]");
+  const price = order.querySelector("[data-plan-price]");
+  const description = order.querySelector("[data-plan-description]");
+  const cta = order.querySelector("[data-order-cta]");
+
+  if (!select) {
+    return;
+  }
+
+  const updateSelectedPlan = () => {
+    const selected = select.options[select.selectedIndex];
+    if (!selected) {
+      return;
+    }
+    if (price && selected.dataset.price) {
+      price.textContent = translateText(selected.dataset.price, currentLanguage);
+    }
+    if (description && selected.dataset.description) {
+      description.textContent = translateText(selected.dataset.description, currentLanguage);
+    }
+    if (cta && selected.dataset.package) {
+      cta.dataset.package = selected.dataset.package;
+    }
+  };
+
+  select.addEventListener("change", updateSelectedPlan);
+  updateSelectedPlan();
 });
 
 const registrationModal = document.querySelector("[data-registration-modal]");
